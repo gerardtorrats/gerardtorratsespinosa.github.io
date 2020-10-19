@@ -1,6 +1,7 @@
 ---
 title: "A Comparative Analysis of the Relationship between Learning Environments and Educational Performance in Japan and the United States"
-subTitle: "Japan Viewed from Interdisciplinary Perspectives 2015 (with Christopher Weiss and Emma Garcia)"  
+Journal: "Japan Viewed from Interdisciplinary Perspectives"  
+YearCoauthors: "2015 (with Christopher Weiss and Emma Garcia)"
 date: "2005-01-01" # Subtract 10 years to the date so that they don't show up in recent publications
 id: research
 type: pages

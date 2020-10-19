@@ -22,9 +22,9 @@
                                         <div class="{{if .Params.image }} col-md-9 {{else}} col-md-12 {{end}}">
                                           <p>{{.Summary | truncate 200}}</p>
                                           <p>
-                                              <span class="text-muted"> Updated: {{ .PublishDate.Format "Jan 02, 2006" }} 
-                                              <span class="text-muted">Tags: </span>
-                                              {{- range $name, $items := .Params.tags }}{{if $name }}, {{ end }}<a href="{{ "tags/" | relLangURL }}{{ $items | urlize | lower }}" class="text-muted">{{$items|title| humanize}}</a>{{end}}
+                                              <span class="text-muted"> Posted on {{ .PublishDate.Format "Jan 02, 2006" }} 
+                                              <!--    Uncomment this section to show Tags: on blog page for each post:  <span class="text-muted">Tags: </span>
+                                                    {{- range $name, $items := .Params.tags }}{{if $name }}, {{ end }}<a href="{{ "tags/" | relLangURL }}{{ $items | urlize | lower }}" class="text-muted">{{$items|title| humanize}}</a>{{end}} -->
 </div>
                                         <div class="{{if .Params.image }} col-md-3 {{else}} d-none {{end}}">
                                             <img src="{{ .Params.image | absURL }}" alt="{{.Params.image }}" class="img-fluid">

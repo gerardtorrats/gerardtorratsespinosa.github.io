@@ -17,4 +17,4 @@ btn:
 catType: "Columbia University"
 ---
 
-Syllabus and materials coming soon.
+Syllabus coming soon.

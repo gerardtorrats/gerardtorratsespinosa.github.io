@@ -1,3 +1,22 @@
+<style type="text/css">
+
+.image-cropper {
+  width: 55px;
+  height: 55px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+
+p.padded
+{
+ padding-left:10px;
+}
+
+</style>
+
+
 {{ "<!-- blog single -->" | safeHTML }}
 <section>
         <div class="row">               
@@ -19,7 +38,7 @@
                                     <div class="col-6">
                                         <ul class="list-inline  blog-head">
                                             <li class="text-muted mb-0">By {{ .Params.Author }}</li>
-                                            <li class="text-muted mb-0">Updated on {{ .PublishDate.Format "Jan 02, 2006" }}</li>
+                                            <li class="text-muted mb-0">{{ .PublishDate.Format "Jan 02, 2006" }}</li>
                                         </ul>
                                     </div>
                                     
@@ -69,7 +88,7 @@
                                 </ul> -->
 
                                 <div class="list-inline-item text-color article-tags">
-                                    {{ range .Params.Tags }}
+                             Tags:   {{ range .Params.Tags }}
                                     <a class="text-color badge badge-light" href="{{ "tags/" | absURL }}{{ . | lower }}">{{ . }}</a>
                                     {{ end }}
                                 </div>
@@ -85,12 +104,15 @@
                         <div class="row">
                             <div class="col-12 mb-4 mb-lg-0">
                                 <div class="media author-card" itemscope="" itemtype="http://schema.org/Person">
-                                    <img class="portrait mr-3 w-30" src="{{.Params.authorImage | absURL}}" itemprop="image" alt="{{.Params.author}}">
-                                    <div class="media-body">
+                                    <img class="image-cropper" src="{{.Params.authorImage | absURL}}" itemprop="image" alt="{{.Params.author}}">
+                                    
+                         <p class="padded"> </p>  <!-- This ln adds blan space between image at the bottom and signature    -->
+                         <div class="media-body">
                                         <h5 class="card-title mb-1" itemprop="name">
                                             <a href="{{.Params.authorUrl}}">{{.Params.author}}</a></h5>
                                             <h6 class="card-subtitle mb-0">{{.Params.authorPost | safeHTML }}</h6>
-                                            <p class="" style="margin-top: -4px;"><span class="card-subtitle">Twitter: </span> <a href="https://twitter.com/gerardtorrats" target="_blank">@gerardtorrats</a> </p>
+                                            <p class="" style="margin-top: -4px;"><span class="card-subtitle"> 
+                                        <!--  Uncomment this line to show Twitter user at the bottom:   Twitter: </span> <a href="https://twitter.com/gerardtorrats" target="_blank">@gerardtorrats</a> </p> -->
                                             <ul class="network-icon" aria-hidden="true"></ul></div></div>
                                         
 

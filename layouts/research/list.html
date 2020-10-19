@@ -6,7 +6,7 @@
             {{ $data := index .Site.Data .Params.id }}
 
             {{if .Params.sidebar}}
-               {{ partial "aside.html" . }}
+               {{ partial "left-menu.html" . }}
             {{end}}
                 
             <div class="{{if .Params.sidebar}} col-xs-12 col-sm-12 col-md-9 {{else}}  col-12 {{end}} row-offcanvas row-offcanvas-left">
@@ -24,7 +24,7 @@
                                         {{else}}
                                             <a href="{{ .RelPermalink }}">{{.Title}}</a>
                                         {{end}}
-                                        <p class="text-muted">{{.Params.subTitle}}</p>                                        
+                                        <em><p class="text-muted">{{.Params.Journal}}</em>, {{.Params.YearCoauthors}}</p>                                        
                                       
 
                                         {{ partial "smbtn.html" . }}

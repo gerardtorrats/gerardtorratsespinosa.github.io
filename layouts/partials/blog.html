@@ -9,17 +9,17 @@
                                 <div class="pt-0 pb-3">
                                     <a href="{{ .Permalink }}" ><strong>{{ .Title }}</strong></a>
                                     <div class="row">
-                                        <div class="{{if .Params.image }} col-md-9 {{else}} col-md-12 {{end}}">
+                                        <div class="{{if .Params.image }} col-md-9 {{else}} col-md-9 {{end}}">
                                             <p>{{.Summary | truncate 200}}</p>
                                             <!-- <p> <span class="text-muted">By</span> {{ .Params.Author }} -->
-                                                <span class="text-muted"> Updated: {{ .PublishDate.Format "Jan 02, 2006" }}  
+                                                <span class="text-muted"> Posted on {{ .PublishDate.Format "Jan 02, 2006" }}  
                                                 <!-- <span class="text-muted"> Categories:</span>
                                                     {{- range $name, $items := .Params.categories }}
                                                     {{ if $name }}, {{ end }}
                                                         <a href="{{ "categories/" | relLangURL }}{{ $items | urlize | lower }}" class="">{{ $items | title | humanize }}</a> 
                                                     {{end}} -->
-                                                    <span class="text-muted">Tags: </span>
-                                                    {{- range $name, $items := .Params.tags }}{{if $name }}, {{ end }}<a href="{{ "tags/" | relLangURL }}{{ $items | urlize | lower }}" class="text-muted">{{$items|title| humanize}}</a>{{end}}
+                                                <!--    Uncomment this section to show Tags: on blog page for each post:  <span class="text-muted">Tags: </span>
+                                                    {{- range $name, $items := .Params.tags }}{{if $name }}, {{ end }}<a href="{{ "tags/" | relLangURL }}{{ $items | urlize | lower }}" class="text-muted">{{$items|title| humanize}}</a>{{end}} -->
                                                 
                                         </div>
                                         <div class="{{if .Params.image }} col-md-3 {{else}} d-none {{end}}">

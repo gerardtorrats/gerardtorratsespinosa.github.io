@@ -11,8 +11,8 @@
 
             <div class="col-lg-9 col-sm-12 mb-2">
                 <h4 class="title-page">{{ .Title }}</h4> 
-                {{if .Params.subTitle}}
-                    <p class="text-muted">{{.Params.subTitle}}</p> 
+                {{if .Params.Journal}}
+                    <em><p class="text-muted">{{.Params.Journal}}</em>, {{.Params.YearCoauthors}}</p> 
                 {{end}}
                 {{if  .Params.btn    }}
                     <div class="btn-links lg">

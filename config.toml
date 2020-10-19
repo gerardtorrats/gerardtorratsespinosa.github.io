@@ -11,7 +11,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 googleAnalytics = ""
 # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
 openGraph = true
-copyright = "© Gerard Torrats-Espinosa (built with <a href='https://gohugo.io/' target='_blank'>Hugo</a>)"
+copyright = "© Gerard Torrats-Espinosa &bull; Built with <a href='https://gohugo.io/' target='_blank'>Hugo</a> &bull; Powered by <a href='https://github.com/' target='_blank'>GitHub</a> and <a href='https://www.netlify.com/' target='_blank'>Netlify</a>"
 
 pygmentsCodefences = true 
 pygmentsStyle = "manni"
@@ -62,9 +62,9 @@ pygmentsStyle = "manni"
   weight = 3
   
 #[[menu.main]]
-#  name = "Data"
-#  url = "/data"
-#  identifier = "data"
+#  name = "Working Papers"
+#  url = "/working-papers"
+#  identifier = "working-papers"
 #  weight = 4
 
 [[menu.main]]

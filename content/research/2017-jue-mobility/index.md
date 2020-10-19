@@ -1,20 +1,15 @@
 ---
 title: "The Effect of Violent Crime on Economic Mobility"
-subTitle: "Journal of Urban Economics 2017 (with Patrick Sharkey)"
+Journal: "Journal of Urban Economics"
 id: research
 date: "2017-01-01"
+YearCoauthors:  2017 (with Patrick Sharkey)
 # Summary. An optional shortened abstract.
 summary:  Recent evidence has found substantial geographic variation in the level of upward economic mobility across US states, metropolitan areas, commuting zones, and counties. However, minimal progress has been made in identifying the key mechanisms that help explain why some urban areas have low rates of upward mobility while others have rates of upward mobility that resemble the most mobile nations in the developed world. In this article we focus attention on one specific dimension of urban areas, the level of violent crime. Using longitudinal data and an array of empirical approaches, we find strong evidence that the level of violent crime in a county has a causal effect on the level of upward economic mobility among individuals raised in families at the 25th percentile of the income distribution. We find that a one standard deviation decline in violent crime as experienced during late adolescence increases the expected income rank in adulthood by at least 2 points. Similarly, a one standard deviation decline in the murder rate increases the expected income rank by roughly 1.5 points. These effect sizes are statistically and economically significant. Although we are limited in our capacity to provide evidence on the mechanisms explaining the link between crime and mobility, we present suggestive results showing that the decline in the violent crime rate reduced the prevalence of high school dropouts at the county level between 1990 and 2010.
 
 btn:
-- url: "#"
-  name: 
-- url : "#"
-  name: 
-- url : "#"
-  name: 
-- url : "#"
-  name: 
+- url: "https://doi.org/10.1016/j.jue.2017.07.001"
+  name: journal
 # Project  image 
 images:
 - path: "research/2017-jue-mobility/2017-jue-mobility-image1.png"
@@ -31,8 +26,9 @@ catType: "Journal Articles"
 ---
 **Abstract**: Recent evidence has found substantial geographic variation in the level of upward economic mobility across US states, metropolitan areas, commuting zones, and counties. However, minimal progress has been made in identifying the key mechanisms that help explain why some urban areas have low rates of upward mobility while others have rates of upward mobility that resemble the most mobile nations in the developed world. In this article we focus attention on one specific dimension of urban areas, the level of violent crime. Using longitudinal data and an array of empirical approaches, we find strong evidence that the level of violent crime in a county has a causal effect on the level of upward economic mobility among individuals raised in families at the 25th percentile of the income distribution. We find that a one standard deviation decline in violent crime as experienced during late adolescence increases the expected income rank in adulthood by at least 2 points. Similarly, a one standard deviation decline in the murder rate increases the expected income rank by roughly 1.5 points. These effect sizes are statistically and economically significant. Although we are limited in our capacity to provide evidence on the mechanisms explaining the link between crime and mobility, we present suggestive results showing that the decline in the violent crime rate reduced the prevalence of high school dropouts at the county level between 1990 and 2010.
 
-{{< googlepdf src="/research/2017-jue-mobility/2017-jue-mobility-article.pdf" title="Download" height="600" width="100%" class="no-button">}}
+{{< pdfedit src="/research/2017-jue-mobility/2017-jue-mobility-article.pdf" title="Download" height="600" width="100%" class="no-button">}}
 
+If you are having issues downloading the PDF with the article, [click here]({{< file-download url="/research/2017-jue-mobility/2017-jue-mobility-article.pdf" >}}).
 
 
 &nbsp;

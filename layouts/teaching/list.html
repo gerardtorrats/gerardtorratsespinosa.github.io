@@ -6,7 +6,7 @@
             {{ $data := index .Site.Data .Params.id }}
 
             {{if .Params.sidebar}}
-               {{ partial "aside.html" . }}
+               {{ partial "left-menu.html" . }}
             {{end}}
                 
             <div class="{{if .Params.sidebar}} col-xs-12 col-sm-12 col-md-9 {{else}}  col-12 {{end}}">

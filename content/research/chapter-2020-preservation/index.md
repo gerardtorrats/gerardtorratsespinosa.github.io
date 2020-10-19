@@ -1,6 +1,7 @@
 ---
 title: "How Can Historic Preservation Be More Inclusive?"
-subTitle: "Preservation and Social Inclusion 2020 (with Ingrid Ellen and Brian McCabe)"  
+Journal: "Preservation and Social Inclusion"  
+YearCoauthors: "2020 (with Ingrid Ellen and Brian McCabe)"
 date: "2010-01-01" # Subtract 10 years to the date so that they don't show up in recent publications
 id: research
 type: pages

@@ -2,20 +2,20 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h4>Recent Publications</h4>
+                <h4>Recent Publications</h4> <!-- Change tp h3 to make font size of header larger -->
                     {{ range $index, $elem := where site.RegularPages "Section" "research" | first 5 }}
                         <div class="publication-list">
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-12 col-lg-8">
                                     <a href="{{ .RelPermalink }}" itemprop="url">{{ .Title }} </a>
-                                    <p class="text-muted mb-0">{{ .Params.subTitle }}</p>
+                                    <p class="text-muted mb-0"><em>{{ .Params.Journal }}</em>, {{ .Params.YearCoauthors }}</p>
                                     {{ partial "smbtn.html" . }}
                                 </div>                           
                             </div>
                             <div class="row">                            
                                 <div class="col-12 col-lg-8">                                
                                     {{ with .Summary }}
-                                        <div class="article-style mt-3" itemprop="articleBody">
+                                        <div class="col-md-0" itemprop="articleBody">
                                             {{ . | truncate 700 }}
                                         </div>
                                     {{ end }}                                

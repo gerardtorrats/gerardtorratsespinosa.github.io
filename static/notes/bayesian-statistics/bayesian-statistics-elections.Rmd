@@ -1,0 +1,598 @@
+---
+title: "Bayesian Statistics"
+subtitle: "Introduction"
+author:  
+date: "Fall 2020"
+output:
+  html_document:
+    number_sections: false
+    toc: false
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+---
+
+
+<style type="text/css">
+
+
+h1.title { /* Title */
+    font-size: 30px;
+    color: DarkBlue;
+    font-weight: normal;
+    font-style: normal;
+}
+h3.subtitle { /* Subtitle */
+    font-size: 20px;
+    color: DarkBlue;
+    font-weight: normal;
+    font-style: normal;
+}
+h4.author { /* Author */
+    font-size: 20px;
+    color: DarkBlue;
+    font-weight: normal;
+    font-style: normal;
+}
+h4.date { /* Date */
+    font-size: 14px;
+    color: DarkBlue;
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+h1 { /* Header 1 */
+    font-size: 20px;
+    color: Blue;
+    font-weight: normal; <!-- this could be:  font-weight: bold -->
+    font-style: normal;
+}
+h2 { /* Header 2 */
+    font-size: 18px;
+    color: Blue;
+    font-weight: normal;
+    font-style: normal;
+}
+h3 { /* Header 3 */
+    font-size: 16px;
+    color: Blue;
+    font-weight: normal;
+    font-style: normal;
+}
+h4 { /* Header 4 */
+    font-size: 14px;
+    color: Blue;
+    font-weight: normal;
+    font-style: normal;
+}
+h5 { /* Header 5 */
+    font-size: 12px;
+    color: Black;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{ /* Normal  */
+      font-size: 12px;
+      font-family: "Verdana", Times, serif;
+  }
+td {  /* Table  */
+  font-size: 8px;
+}
+
+
+code.r{ /* Code block */
+    font-size: 12px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 12px;
+}
+</style>
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Examples from Bayesian Stats Course (Columbia, Fall 2020)
+
+## Example 1a: Bayes Rule
+
+
+You go to the doctor for a COVID-19 rapid test. Let `theta` represent your true state: `theta` = 1 if you are infected with the virus, and `theta` = 0 if you are not. Let `y` denote the result of the test: `y` = 1 if the test comes back positive and `y` = 0 if the test is negative. The probability of a correct result for an infected subject is called the sensitivity of the test (`Pr(y=1|theta=1)`), we will denote it `p` here. The probability of correct result for one not infected with the virus is called the specificity (`Pr(Y=0|theta=0)`), denoted as `q.`  
+
+Do you have the virus? Of course you don’t know. In Bayesian statistics we describe our uncertainty about the world by assigning probabilities to various states. Suppose your prior probability
+of being infected is `pi`. That is, the marginal probability `Pr(theta = 1) = pi` .
+
+With this information we can define the following:
+
+- `pi`  as the prior prob of infection ("prevalence"): `pi = Pr(theta=1)`
+- `q0` is the false positive probability: `q0 = Pr(Y=1|theta=0)`
+- `q1` is the true positive probability: `q1 = Pr(Y=1|theta=1)`. This is also called the sensitivity of the test; `1-q0` is the specificity of the test.
+
+
+We set the following values in R:
+```{r}
+pi <- .04   # 20% of population is infected
+q1 <- .90  # test has sensitivity of .90
+q0 <- .08  # test has specificity of .92
+```
+
+
+With this we can compute the posterior probabilities, given test result. 
+
+The probability of infection, before the test result is available is `pi`:
+```{r}
+pi  # Prob of infection, before test result is available 
+
+```
+
+The probability of infection given a positive test is:
+$$Pr(\theta|y_1 =1) = \frac{Pr(\theta = 1, y_1 = 1)}{Pr(y_1=1)} = \frac{Pr(\theta=1)Pr(y_1=1|\theta=1)}{Pr(y_1=1)} = \frac{\pi p }{\pi p + (1-\pi)q}$$
+
+
+```{r}
+
+pi * q1 / (pi*q1 + (1-pi)*q0)  # Prob of infection given positive test result
+
+```
+
+The probability of infection given a negative test is:
+$$Pr(\theta|y_1 =0) = \frac{Pr(\theta = 1, y_1 = 1)}{Pr(y_1=0)} = \frac{Pr(\theta=1)Pr(y_1=0|\theta=1)}{Pr(y_1=0)} = \frac{\pi (1-p) }{\pi (1-p) + (1-\pi)(1-q)}$$
+
+```{r}
+
+pi*(1-q1) / (pi*(1-q1) + (1-pi)*(1-q0))  # Prob of infection if test negative
+```
+
+Plot posterior probability versus prior probability:
+
+```{r}
+post.prob <- function(pi, q0, q1)
+{
+  pi * q1 / (pi*q1 + (1-pi)*q0)
+}
+
+grid <- seq(.01, .99, .01)
+
+plot(grid, post.prob(pi=grid, q0=q0, q1=q1), type="l", 
+     xlab="Prior probability", ylab="Posterior prob", 
+     main="Prob of infection given positive test", ylim=c(0,1))
+```
+
+That's how the posterior prob varies with prior prob
+
+What about the sensitivity and specificity of the test?
+
+```{r}
+op <- par(mfrow=c(1,2))
+
+plot(grid, post.prob(pi=pi, q1=grid, q0=q0), type="l", 
+     xlab="Sensitivity of test", ylab="Posterior prob", 
+     main="Prob of infection given positive test", ylim=c(0,1))
+
+plot(grid, post.prob(pi=pi, q1=q1, q0=1-grid), type="l",
+     xlab="Specificity of test", ylab="Posterior prob", 
+     main="Prob of infection given positive test", ylim=c(0,1))
+
+par(op)
+```
+ 
+### Monte Carlo approximation 
+Simulate the joint distribution of theta and Y:
+```{r}
+
+S <- 1000;  theta <- NULL;  y <- NULL;
+
+for(s in 1:S)
+{
+  theta[s] <- rbinom(1, 1, pi)
+  prob <- ifelse(theta[s]==1, q1, q0)
+  y[s] <- rbinom(1, 1, prob)
+}
+
+table(theta, y) / S  # approximate joint distribution
+
+mean(theta[y==1])  #  Monte Carlo approx to posterior prob
+```
+
+
+Of course there's no real need for Monte Carlo, when the exact  joint distribution is available by straightforward calculation:
+```{r}
+
+joint <- matrix(c((1-pi)*(1-q0), pi*(1-q1), (1-pi)*q0, pi*q1), 2,2)
+
+rownames(joint) <- c("theta=0", "theta=1")
+
+colnames(joint) <- c("y=0", "y=1")
+
+joint
+
+joint[2,2] / sum(joint[,2])
+```
+
+
+## Example 1b: Beta-Binomial Model
+
+Create data:
+
+```{r}
+rm(list=ls())
+
+n <- 100;  y <- 60;
+
+theta <- seq(0,1,.01)
+```
+
+
+
+Hyperparameters:
+
+```{r}
+a          <- c(1,.5,2,20)
+b          <- c(1,.5,2, 1)
+
+```
+
+
+Calculations:
+
+```{r}
+post_mean  <- (y+a)/(n+a+b)
+post_var   <- (y+a)*(n-y+b)/((n+a+b)^2 * (n+a+b+1))
+post_sd    <- sqrt(post_var)
+post_PG5   <- 1-pbeta(0.5,a+y,b+n-y)
+pri_mean   <- (a)/(a+b)
+pri_var    <- (a)*(b)/((a+b)*(a+b)*(a+b+1))
+pri_sd     <- sqrt(pri_var)
+pri_PG5    <- 1-pbeta(0.5,a,b)
+
+```
+
+
+
+Summary plot of prior and posterior on same axes 
+```{r}
+plot(theta,dbeta(theta,1,1),lwd=2,type="l",
+     xlab=expression(theta), ylab="Density",
+     ylim=c(0,10), cex.lab=1.5)  
+
+legend("topleft", c("Prior","Posterior"), col=1:2,
+       lwd=2, inset=0.05, cex=1.25)
+
+lines(theta, dbeta(theta,y+1,n-y+1), col=2, lwd=2)
+```
+
+
+Consider four different priors:
+
+```{r}
+op <- par(mfrow=c(2,2))
+
+for(j in 1:4)
+{
+  plot(theta,dbeta(theta,a[j],b[j]), lwd=2, type="l", ylim=c(0,10), 
+       xlab=expression(theta), ylab="Density",cex.lab=1.25)  
+  legend("topleft",c("Prior","Posterior"),col=1:2,lwd=2,inset=0.05)
+  lines(theta,dbeta(theta,y+a[j],n-y+b[j]),col=2,lwd=2)
+}
+
+par(op)
+
+```
+
+Compare the four priors to each other (ignoring data)
+
+```{r}
+plot(NA, xlim=0:1, xlab=expression(theta), ylab="Prior density",
+     ylim=c(0,10), cex.lab=1.25)  
+
+for(j in 1:4)
+{
+  lines(theta, dbeta(theta, a[j], b[j]), col=j, lwd=2)
+}
+
+legend("topleft",
+       c("a=1    b=1","a=0.5 b=0.5", "a=2    b=2","a=20  b=1"), 
+       col=1:4, lwd=2, inset=0.05, cex=1.25)
+```
+
+
+
+Compare the four posteriors (single set of axes)
+
+```{r}
+plot(NA, xlim=0:1, xlab=expression(theta), ylab="Posterior density",
+     ylim=c(0,10), cex.lab=1.25)  
+
+for(j in 1:4)
+{
+  lines(theta, dbeta(theta, y+a[j], n-y+b[j]), col=j, lwd=2)
+}
+
+legend("topleft",
+       c("a=1    b=1","a=0.5 b=0.5", "a=2    b=2","a=20  b=1"),
+       col=1:4, lwd=2, inset=0.05, cex=1.25)
+```
+
+
+
+Numerical summaries
+
+```{r}
+round(cbind(a, b, pri_mean, pri_sd, pri_PG5, 
+            post_mean, post_sd, post_PG5), 2)
+```
+
+
+## Example 1c: Summarizing a Posterior
+
+
+```{r}
+rm(list=ls()); set.seed(20200909); 
+```
+
+
+Data
+
+```{r}
+y <- 8; n <- 10
+```
+
+
+
+The posterior is theta|y~Beta(A,B)
+
+```{r}
+A <- y+1; B <- n-y+1
+```
+
+
+
+Posterior mean
+
+```{r}
+A/(A+B)
+```
+
+ 
+Posterior standard deviation
+
+```{r}
+sqrt(A*B/((A+B)*(A+B)*(A+B+1)))
+```
+
+
+Posterior 95% credible interval
+
+```{r}
+qbeta(c(0.025,0.975),A,B)
+```
+
+
+Posterior probability that theta<0.5
+
+```{r}
+pbeta(0.5,A,B)
+```
+
+### Inference about odds 
+
+If theta is a prob the odds are gamma = theta/(1-theta)
+
+```{r}
+theta <- rbeta(1000, A, B)
+```
+
+
+Approximate the posterior mean and SD using Monte Carlo
+
+```{r}
+mean(theta); sd(theta);
+```
+
+
+Transform to odds
+
+```{r}
+gamma <- theta/(1-theta)
+```
+
+
+Approximate the posterior mean and SD
+
+```{r}
+mean(gamma); sd(gamma);
+```
+
+
+Show posterior density, mark mean, median and mode
+
+```{r}
+vline <- function(x, A, B, lwd=1, col=1, lty=1)
+{
+  theta <- seq(0, 1, length=1000)
+  k     <- theta[which.min(abs(theta-x))]
+  lines(c(k,k), c(0,dbeta(k,A,B)), lwd=lwd, col=col, lty=lty) 
+}
+
+MAP <- (A-1)/(A+B-2)     # Posterior mode
+
+MN  <- A/(A+B)           # Posterior mean
+
+MD  <- qbeta(0.5, A, B)  # Posterior median
+
+theta <- seq(0,1,length=100)
+
+plot(theta,dbeta(theta,A,B), lwd=2, type="l",
+     xlab=expression(theta), ylab="Posterior density")
+
+vline(MN,  A, B, lwd=2, col=1)
+
+vline(MAP, A, B, lwd=2, col=2)
+
+vline(MD,  A, B, lwd=2, col=3)
+
+legend("topleft",c("Post mean","MAP","Post median"), 
+       col=1:3, lwd=2, bty="n", cex=1.25)
+```
+
+
+
+### Bayesian credible intervals
+
+```{r}
+plot(theta, dbeta(theta,A,B), type="l", lwd=2, 
+     xlab=expression(theta), ylab="Posterior density")
+
+vline(qbeta(0.1,  A,B), A, B, lwd=2, col=1)
+
+vline(qbeta(0.9,  A,B), A, B, lwd=2, col=1)
+
+vline(qbeta(0.05, A,B), A, B, lwd=2, col=2)
+
+vline(qbeta(0.95, A,B), A, B, lwd=2, col=2)
+
+vline(qbeta(0.025,A,B), A, B, lwd=2, col=3)
+
+vline(qbeta(0.975,A,B), A, B, lwd=2, col=3)
+
+legend("topleft",
+       c("80% cred set","90% cred set","95% cred set"),
+       col=1:3, lwd=2, bty="n", cex=1.25)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+# DataCamp Bayesian Data Analysis Course
+
+## Chapter 1
+
+### A Model for a Zombie Drug
+The role of probability distributions in Bayesian data analysis is to represent uncertainty, and the role of Bayesian inference is to update probability distributions to reflect what has ben learned from data.
+
+
+A model for the proportion of success (success can be clicking and add, or curing a patient):
+
+- The data is a vector of successes and failures represented by 0 an 1.
+- There is an unknown underlying *proportion of success*.
+- If a data point is a success, this is only a result of this underlying proportion.
+- Prior to seeing any data, any underlying proportion of success is equally likely.
+- The result is a probability distribution that represents what the model knows about the underlying proportion of success.
+
+The model, `prop_model`, can be written in R as follows (this was written by DataCamp): 
+
+```{r}
+
+library(tidyverse)
+library(ggjoy)
+prop_model <- function (data = c(), prior_prop = c(1, 1), n_draws = 10000, 
+    show_plot = TRUE) 
+{
+    data <- as.logical(data)
+    proportion_success <- c(0, seq(0, 1, length.out = 100), 1)
+    data_indices <- round(seq(0, length(data), length.out = min(length(data) + 
+        1, 20)))
+    post_curves <- map_dfr(data_indices, function(i) {
+        value <- ifelse(i == 0, "Prior", ifelse(data[i], "Success", 
+            "Failure"))
+        label <- paste0("n=", i)
+        probability <- dbeta(proportion_success, prior_prop[1] + 
+            sum(data[seq_len(i)]), prior_prop[2] + sum(!data[seq_len(i)]))
+        probability <- probability/max(probability)
+        tibble(value, label, proportion_success, probability)
+    })
+    post_curves$label <- fct_rev(factor(post_curves$label, levels = paste0("n=", 
+        data_indices)))
+    post_curves$value <- factor(post_curves$value, levels = c("Prior", 
+        "Success", "Failure"))
+    p <- ggplot(post_curves, aes(x = proportion_success, y = label, 
+        height = probability, fill = value)) + geom_joy(stat = "identity", 
+        color = "white", alpha = 0.8, panel_scaling = TRUE, size = 1) + 
+        scale_y_discrete("", expand = c(0.01, 0)) + scale_x_continuous("Underlying proportion of success") + 
+        scale_fill_manual(values = hcl(120 * 2:0 + 15, 100, 65), 
+            name = "", drop = FALSE, labels = c("Prior   ", "Success   ", 
+                "Failure   ")) + theme_light(base_size = 18) + 
+        theme(legend.position = "top")
+    if (show_plot) {
+        print(p)
+    }
+    invisible(rbeta(n_draws, prior_prop[1] + sum(data), prior_prop[2] + 
+        sum(!data)))
+}
+```
+
+Now let's try and see. Assume you just flipped a coin four times and the result was heads, tails, tails, heads. If you code heads as a success and tails as a failure then the following R codes runs prop_model with this data
+
+```{r}
+data <- c(1, 0, 0, 1)
+prop_model(data)
+```
+
+The output of `prop_model` is a plot showing what the model learns about the underlying proportion of success from each data point in the order you entered them. At n=0 there is no data, and all the model knows is that it's equally probable that the proportion of success is anything from 0% to 100%. At n=4 all data has been added, and the model knows a little bit more.
+
+If we really were interested in the underlying proportion of heads of this coin then `prop_model` isn't particularly useful. Since it assumes that any underlying proportion of success is equally likely prior to seeing any data it will take a lot of coin flipping to convince `prop_model` that the coin is fair. This model is more appropriate in a situation where we have little background knowledge about the underlying proportion of success.
+
+
+Let's say the zombie apocalypse is upon us and we have come up with a new experimental drug to cure zombieism. We have no clue how effective it's going to be, but when we gave it to 13 zombies two of them turned human again. Change the data argument to `prop_model` to estimate the underlying proportion of success of curing a zombie.
+
+
+```{r}
+data <- c(0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+prop_model(data)
+```
+The model implemented in prop_model makes more sense here as we had no clue how good the drug would be. The final probability distribution (at n=13) represents what the model now knows about the underlying proportion of cured zombies. What proportion of zombies would we expect to turn human if we administered this new drug to the whole zombie population?
+
+Answer: Between 5% to 40%.
+
+#### Priors and Posteriors
+
+Here again is the `prop_model` function which has been given the data from our zombie experiment where two out of 13 zombies got cured. In addition to producing a plot, `prop_model` also returns a large random sample from the posterior over the underlying proportion of success.
+
+Assign the return value of `prop_model` to a variable called `posterior` and take a look at the first number of samples using the command `head(posterior)`
+
+
+```{r}
+data = c(1, 0, 0, 1, 0, 0,
+         0, 0, 0, 0, 0, 0, 0)
+posterior <- prop_model(data)
+head(posterior)
+```
+
+Looking at these first few samples confirms what is already shown in the plot: That the underlying proportion of cured zombies is likely somewhere between 5% and 50%. But these were just the first six samples in posterior which currently contain 10,000 samples (the default of `prop_model`).
+
+Take a look at the distribution of all the samples in posterior by plotting it as a histogram using the `hist()`function with posterior as the first argument.
+
+```{r}
+hist(posterior, breaks = 30, xlim = c(0,1), col = "palegreen4")
+```
+
+Compare this histogram to the plot produced directly by prop_model. You should notice that the histogram and the posterior distribution (at n=13) describe the same distribution.
+
+#### Summarizing the Drug Experiment
+
+A point estimate is a single number used to summarize what's known about a parameter of interest. It can be seen as a "best guess" of the value of the parameter. A commonly used point estimate is the median of the posterior. It's the midpoint of the distribution, and it's equally probable for the parameter value to be larger than the median as it is to be smaller than it.
+
+```{r}
+median(posterior)
+```
+So, a best guess is that the drug would cure around 18% of all zombies. Another common summary is to report an interval that includes the parameter of interest with a certain probability. This is called a *credible interval* (CI). With a posterior represented as a vector of samples you can calculate a CI using the `quantile()` function. Let's calculate the 90% credible interval of `posterior`
+
+```{r}
+quantile(posterior,c(.05,.95))
+```
+

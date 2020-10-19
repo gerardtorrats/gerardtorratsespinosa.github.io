@@ -29,9 +29,10 @@
                     <div class="portrait-title text-center">
                       <!-- <h2 itemprop="name">{{ $person.name }}</h2> -->
                       {{ with $person.role }}<h3 itemprop="jobTitle" class="mt-2">{{ . | safeHTML | emojify }}</h3>{{ end }}
-                      <p><a href="{{ $person.cv}}">{{ with $person.cvtext }} {{ . | safeHTML | emojify }} {{ end }}</a></p> 
-
-
+                      <h3><a href="{{ $person.cv}}">{{ with $person.cvtext }} {{ . | safeHTML | emojify }} {{ end }}</a></h3> 
+                      <h3><a href="{{ $person.office_hours}}">{{ with $person.office_hours_text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   
+                      {{ with $person.additional_text }}<p itemprop="jobTitle" class="mt-2">{{ . | safeHTML | emojify }}</p>{{ end }}      
+                    
                       {{if  $person.courses}}
                         <ul class="courselist">
                      
@@ -66,16 +67,30 @@
                           {{ else if in (slice "http" "https") $scheme }}
                           {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
                       {{ end }}
+                      
                       <li>
+                        
                         <a itemprop="sameAs" href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }}>
                           {{if $img}} 
                             <img src="{{$img}}" alt="{{.icon}}">
                           {{else}}
+                          
                           <i class="{{ $pack }} {{ $pack_prefix }}-{{ .icon }} big-icon"></i> 
+                          
                           {{end}}
+                          
                         </a>
+                        
                       </li>
                       {{ end }}
+                       <div class="portrait-title text-center">
+                       <h3><a href="{{ $person.emailme}}">{{ with $person.emailmetext }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>
+                          {{ with $person.additional_text2 }}<h3 itemprop="jobTitle" class="mt-2">{{ . | safeHTML | emojify }}</h3>{{ end }}   
+                      </div>
+                      
+
+ 
+
                     </ul>
               
                   </div>
