@@ -1,0 +1,123 @@
+{{ "<!-- blog single -->" | safeHTML }}
+<section>
+        <div class="row">               
+            <div class="col-2 aside black d-none d-md-block">
+                <div class="posfixed">
+                    {{ .TableOfContents | truncate 65 }}
+                </div>
+                
+            </div>
+            <div class="col-md-8 col-xs-12 single-content  mb-2">
+                <div class="bg-white">
+                    {{ if .Params.image }}
+                        <img class="img-fluid w-100 rounded-top mb-3" src="{{ .Params.image | absURL }}" alt="blog-image">
+                    {{end}}
+                        <div class="pb-4">
+                            <h1 class="title-page mt-0">{{ .Title }}</h3>
+                                                          <p class="title-page mt-0">{{ .Params.subTitle }}</p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul class="list-inline  blog-head">
+                                            <li class="text-muted mb-0">By {{ .Params.Author }}</li>
+                                            <li class="text-muted mb-0">Updated on {{ .PublishDate.Format "Jan 02, 2006" }}</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="col-6">
+                                        <ul class="list-inline  social blog-head text-right">
+                                            <li  class="list-inline-item" >
+                                                <a class="twitter"
+                                                   href="https://twitter.com/intent/tweet?text={{ .Title | html }}&amp;url={{ .Permalink | html }}"
+                                                   target="_blank" rel="noopener">
+                                                  <img src="{{ "/images/twitter-share-button.png" | absURL }}" alt="twitter">
+                                                </a>
+                                              </li>
+                                              <li class="list-inline-item">
+                                                <a class="linkedin"
+                                                   href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ .Permalink | html }}&amp;title={{ .Title | html }}"
+                                                   target="_blank" rel="noopener">
+                                                   <img src="{{ "/images/linkedin-share-button.png" | absURL }}" alt="linkedin">
+                                                   
+                                                </a>
+                                              </li>
+                                              <li class="list-inline-item">
+                                                <a class="email"
+                                                   href="mailto:?subject={{ .Title | html }}&amp;body={{ .Permalink | html }}">
+                                                   <img src="{{ "/images/email-share-button.png" | absURL }}" alt="linkedin">
+                                                </a>
+                                              </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            
+                            
+                            <div class="post-content">
+                                {{ .Content }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="py-4 border-bottom mb-100">
+                        <div class="row">
+                            <div class="col">
+                                <!-- <ul class="list-inline d-block  m-0 p-0 blog-head">
+                                    <li class="list-inline-item text-color categories"><i class="fa fa-folder"></i>
+                                        {{ range .Params.categories }}
+                                        <a class="text-color badge badge-light mb-0" href="{{ "categories/" | absURL }}{{ . | lower }}">{{ . }}</a>
+                                        {{ end }}
+                                    </li>
+                                </ul> -->
+
+                                <div class="list-inline-item text-color article-tags">
+                                    {{ range .Params.Tags }}
+                                    <a class="text-color badge badge-light" href="{{ "tags/" | absURL }}{{ . | lower }}">{{ . }}</a>
+                                    {{ end }}
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+
+                    <div class="py-4 mb-100">
+                        <div class="row">
+                            <div class="col-12 mb-4 mb-lg-0">
+                                <div class="media author-card" itemscope="" itemtype="http://schema.org/Person">
+                                    <img class="portrait mr-3 w-30" src="{{.Params.authorImage | absURL}}" itemprop="image" alt="{{.Params.author}}">
+                                    <div class="media-body">
+                                        <h5 class="card-title mb-1" itemprop="name">
+                                            <a href="{{.Params.authorUrl}}">{{.Params.author}}</a></h5>
+                                            <h6 class="card-subtitle mb-0">{{.Params.authorPost | safeHTML }}</h6>
+                                            <p class="" style="margin-top: -4px;"><span class="card-subtitle">Twitter: </span> <a href="https://twitter.com/gerardtorrats" target="_blank">@gerardtorrats</a> </p>
+                                            <ul class="network-icon" aria-hidden="true"></ul></div></div>
+                                        
+
+                                {{ "<!-- share-icon -->" | safeHTML }}
+                                 <!-- <div class="d-flex">
+                                    <span class="font-weight-light mt-2 mr-3">Share:</span>
+                                    
+                                    <ul class="list-inline d-inline-block">
+                                        {{ range .Site.Params.sharePost }}
+                                        <li class="list-inline-item">
+                                            <a class="share-icon bg-secondary" href="{{ .URL | absURL }}">
+                                                <i class="{{ .icon }}"></i>
+                                            </a>
+                                        </li>
+                                        {{ end }}
+                                    </ul>
+                                </div>  -->
+                            </div>
+                            {{ "<!-- tags -->" | safeHTML }}
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+           
+
+
+
+</section>
+{{ "<!-- /blog-single -->" | safeHTML }}

@@ -1,0 +1,55 @@
+{{ define "main" }}
+
+{{ " <!-- page title -->" | safeHTML }}
+<section class="section ">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3 aside black d-none d-md-block">
+        <div class="posfixed">
+          <h2 class="mt-0">{{ .Title }}</h2>
+        </div>
+      </div>
+      
+      <div class="col-md-9 col-xs-12">
+        {{ "<!-- blog-item -->" | safeHTML }}
+                    <ul class="catlist post-list">                    
+                        {{ range .Data.Pages }}                            
+                            <li>                                
+                                <div class="pt-0 pb-3">
+                                    <a href="{{ .Permalink }}" ><strong style="font-weight: 500;">{{ .Title }}</strong></a>
+                                    <div class="row">
+                                        <div class="col-md-9">
+
+                                            <p>{{.Summary | truncate 380}}</p>
+                                            <p>
+                                            <!-- <p> <span class="text-muted">By</span> {{ .Params.Author }} -->
+                                                <span class="text-muted"> Updated</span> {{ .PublishDate.Format "Sep 2, 2006" }} 
+                                                {{- range $name, $items := .Params.categories }}
+                                                {{ if $name }}, {{ end }}
+                                                    <a href="{{ "categories/" | relLangURL }}{{ $items | urlize | lower }}" class="">{{ $items | title | humanize }}</a> 
+                                                {{end}}
+                                            </p>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <img src="{{ .Params.image | absURL }}" alt="{{.Params.image }}" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+
+                            </li>
+                        {{end}}
+                    </ul>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+{{ " <!-- /page title -->" | safeHTML }}
+
+
+
+{{ end }}

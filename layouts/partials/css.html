@@ -1,0 +1,55 @@
+{{- $inServerMode := .Site.IsServer }}
+{{- $fontFace     := replace .Site.Params.font.name " " "+" }}
+{{- $fontSizes    := delimit .Site.Params.font.sizes ";" }}
+{{- $fontDisplay  := "&display=swap" }}
+
+{{- $fontUrl      := printf "https://fonts.googleapis.com/css2?family=%s:wght@%s%s" $fontFace $fontSizes $fontDisplay }}
+
+
+<link rel="icon" type="image/png" href="{{ "images/favicon.svg" | relURL }}" />
+<!-- <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400&display=swap" rel="stylesheet">-->
+
+<link href="https://fonts.googleapis.com/css2?family=Mukta+Vaani&display=swap" rel="stylesheet">
+
+<!-- <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;600&display=swap" rel="stylesheet"> -->
+
+<!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500&display=swap" rel="stylesheet"> -->
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<!--Website font-->
+
+
+<link href="{{ $fontUrl }}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="{{ "/bootstrap/bootstrap.min.css" | relURL }}">
+<link rel="stylesheet" type="text/css" href="{{ "/css/style.css" | relURL }}">
+
+{{ partial "head_highlightjs" . }}
+{{if eq .Params.pageType  "r"}}
+    <style>
+        body{
+            font-family: 'Source Sans Pro', sans-serif !important;
+        }
+        .tocify .list-group-item{
+            font-size:15px;
+        }
+        
+        /* .navbar-nav li:last-child{
+            font-family: 'Special Elite', cursive !important;
+        } */
+        
+    </style>
+{{end}}
+
+{{- if .Params.Plotly }}
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+{{- end }}
+
+<!-- <script type="text/javascript">
+    var host = "gerardtorratsespinosa.com";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+</script> -->

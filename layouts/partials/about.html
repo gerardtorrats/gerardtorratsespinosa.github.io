@@ -1,0 +1,90 @@
+<style type="text/css">
+
+.image-cropper {
+  width: 225px;
+  height: 225px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+
+</style>
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            
+            {{$author:= "gerard"}}
+            {{ $person_page_path := (printf "/authors/%s" (urlize $author)) }}
+            {{ $person_page := site.GetPage $person_page_path }}
+            
+            {{ $person := $person_page.Params }}
+            {{ $avatar := ($person_page.Resources.ByType "image").GetMatch "*avatar*" }}
+            <div class="col-12 col-lg-3">
+                <div id="profile" class="mt-2">
+                    {{ $avatar_image := $avatar.Fill "225x225 Center" }}
+                    <img class="image-cropper" src="{{ $avatar_image.RelPermalink }}" itemprop="image" alt="{{ $author }}">
+
+                    <div class="portrait-title text-center">
+                      <!-- <h2 itemprop="name">{{ $person.name }}</h2> -->
+                      {{ with $person.role }}<h3 itemprop="jobTitle" class="mt-2">{{ . | safeHTML | emojify }}</h3>{{ end }}
+                      <p><a href="{{ $person.cv}}">{{ with $person.cvtext }} {{ . | safeHTML | emojify }} {{ end }}</a></p> 
+
+
+                      {{if  $person.courses}}
+                        <ul class="courselist">
+                     
+                            {{ range $person.courses }}
+                            <li>
+                            {{ with .course }} {{.}}{{ end }}
+                            <span >{{ .institution }}</span>
+                            <em>{{ .year }}</em>
+                            </li>
+                            {{ end }}
+                            
+                            </ul>
+                        {{end}}
+                     
+                    </div>
+              
+                    <link itemprop="url" href="{{ .Permalink }}">
+              
+                    <ul class="network-icon" aria-hidden="true">
+                      {{ range $person.social }}
+                        {{ $pack := or .icon_pack "fas" }}
+                        {{ $pack_prefix := $pack }}
+                        {{ if in (slice "fab" "fas" "far" "fal") $pack }}
+                          {{ $pack_prefix = "fa" }}
+                        {{ end }}
+                        {{ $link := .link }}                        
+                        {{ $img := .image }}
+                        {{ $scheme := (urls.Parse $link).Scheme }}
+                        {{ $target := "" }}
+                          {{ if not $scheme }}
+                            {{ $link = .link | relLangURL }}
+                          {{ else if in (slice "http" "https") $scheme }}
+                          {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+                      {{ end }}
+                      <li>
+                        <a itemprop="sameAs" href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }}>
+                          {{if $img}} 
+                            <img src="{{$img}}" alt="{{.icon}}">
+                          {{else}}
+                          <i class="{{ $pack }} {{ $pack_prefix }}-{{ .icon }} big-icon"></i> 
+                          {{end}}
+                        </a>
+                      </li>
+                      {{ end }}
+                    </ul>
+              
+                  </div>
+            </div>
+            
+            <div class="col-12 col-lg-9 about-content">
+                {{ $person_page.Content  }}
+            </div>
+        </div>
+    </div>
+
+</section>

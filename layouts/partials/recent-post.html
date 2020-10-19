@@ -1,0 +1,20 @@
+{{ "<!-- Widget Recent Post -->" | safeHTML }}
+        <div class="mb-50">
+            <h4 class="mb-3">Recent News</h4>
+            {{ range first 3 (where .Site.Pages "Type" "post") }}
+            {{ "<!-- post -->" | safeHTML }}
+            <div class="d-flex py-3 border-bottom">
+                <div class="mr-4">
+                    <a href="{{ .Permalink }}">
+                        <img class="rounded img-fluid recent-post-thumb" src="{{ .Params.image | absURL }}" alt="post-thumb">
+                    </a>
+                </div>
+                <div>
+                    <h6 class="mb-3">
+                        <a class="text-dark" href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h6>
+                    <p class="meta">{{ .PublishDate.Format "02 Jan 2006" }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>

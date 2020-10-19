@@ -1,0 +1,66 @@
+{{ define "main" }}
+
+
+{{ " <!-- page title -->" | safeHTML }}
+<section class="section ">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3 aside black d-none d-md-block">
+        <div class="posfixed">
+          <h2 class="mt-0">{{ .Title }}</h2>
+        </div>
+      </div>
+      
+      <div class="col-md-9 col-xs-12">
+        {{ "<!-- blog-item -->" | safeHTML }}
+                    <ul class="catlist ">                    
+                        {{ range .Data.Pages }}                            
+                            <li>     
+                                    <!-- <a href="{{ .Permalink }}" >{{ .Title }}</a> -->
+
+                                    {{if or (eq .Params.linkType "external") (eq .Params.linkType "internal") }}
+                                            <a href="{{ .Params.Permalinks }}" target="_blank">{{.Title}}</a>
+                                        {{else}}
+                                            <a href="{{ .RelPermalink }}">{{.Title}}</a>
+                                        {{end}}
+
+                                    <div class="row">
+                                        <div class="col-md-9">
+
+                                            <!-- <p>{{.Summary | truncate 380}}</p>  -->
+                                            <p class="text-muted">{{.Params.subTitle}}</p> 
+                                            
+                                            <!-- <p> <span class="text-muted">By</span> {{ .Params.Author }}
+                                                <span class="text-muted"> Updated</span> {{ .PublishDate.Format "Sep 2, 2006" }} 
+                                                {{- range $name, $items := .Params.area }}
+                                                {{ if $name }}, {{ end }}
+                                                    <a href="{{ "area/" | relLangURL }}{{ $items | urlize | lower }}" class="">{{ $items | title | humanize }}</a> 
+                                                {{end}}
+                                            </p> -->
+                                            {{ partial "smbtn.html" . }}
+                                        </div>
+                                        {{if .Params.image}}
+                                        <div class="col-md-3">
+                                            <img src="{{ .Params.image | absURL }}" alt="{{.Params.image }}" class="img-fluid">
+                                        </div>
+
+                                        {{end}}
+                                    </div>
+                                    
+                                    
+
+                            </li>
+                        {{end}}
+                    </ul>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+{{ " <!-- /page title -->" | safeHTML }}
+
+
+
+{{ end }}

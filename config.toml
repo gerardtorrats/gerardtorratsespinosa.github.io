@@ -1,0 +1,127 @@
+baseURL = "https://gerardtorratsespinosa.com/"
+canonifyURLs = true
+enforce_ssl = "www.gerardtorratsespinosa.com"
+languageCode = "en-us"
+# Title of your site
+title = "Gerard Torrats-Espinosa"
+# Used as meta data; describe your site to make Google Bots happy 
+description = "Assitant Professor, Department of Sociology and Data Science Institute at Columbia University"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+#Put in your tracking code without quotes like this: UA-XXXXXX..
+googleAnalytics = ""
+# Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
+openGraph = true
+copyright = "© Gerard Torrats-Espinosa (built with <a href='https://gohugo.io/' target='_blank'>Hugo</a>)"
+
+pygmentsCodefences = true 
+pygmentsStyle = "manni"
+
+[blackfriday]
+  plainIDAnchors = true
+  hrefTargetBlank = true
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    style = "monokai" # manni
+    tabWidth = 4
+  [markup.tableOfContents]
+    # endLevel = 3
+    startLevel = 1
+
+[taxonomies]
+  category = "categories"
+  area = "area"
+  tag = "tags"
+
+
+[menu]
+
+  [[menu.main]]
+  name = "Home"
+  URL = "/"
+  identifier = "home"
+  weight = 1
+
+[[menu.main]]
+  name = "CV"
+  url = "/cv"
+  identifier = "cv"
+  weight = 2
+  
+[[menu.main]]
+  name = "Research"
+  url = "/research"
+  identifier = "research"
+  weight = 3
+  
+#[[menu.main]]
+#  name = "Data"
+#  url = "/data"
+#  identifier = "data"
+#  weight = 4
+
+[[menu.main]]
+  name = "Teaching"
+  url = "/teaching"
+  identifier = "teaching"
+  weight = 5
+
+[[menu.main]]
+  name = "Media"
+  url = "/media"
+  identifier = "media"
+  weight = 6
+
+#[[menu.main]]
+#  name = "Notes"
+#  url = "/notes"
+#  identifier = "notes"
+#  weight = 7
+
+#[[menu.main]]
+#  name = "Resources"
+#  url = "/resources"
+#  identifier = "resources"
+#  weight = 8
+
+  
+#[[menu.main]]
+#   name = "Blog"
+#   url = "/blog"
+#   identifier = "blog"
+#   weight = 9
+
+
+[params]
+  logo = ""
+  mail = "gerardtorrats@gmail.com"
+  mobile = " "
+  # Google Analitycs
+  googleAnalitycsID = "UA-180714519-1"
+  underconstruction = false
+
+  share = true
+
+  # options for highlight.js (version, additional languages, and theme)
+  highlightjsVersion = "9.12.0"
+  highlightjsCDN = "//cdnjs.cloudflare.com/ajax/libs"
+  highlightjsLang = ["r", "yaml"]
+  highlightjsTheme = "github"
+
+  MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
+  MathJaxVersion = "2.7.5"
+
+
+
+[params.font]
+  name = "Source+Sans+Pro"
+  sizes = ["200", "300", "400", "600", "700", "900" ]
+
+  

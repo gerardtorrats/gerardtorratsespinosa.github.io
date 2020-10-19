@@ -1,0 +1,55 @@
+<div class="figure">
+    <div class="figure-plot" id="{{ .Get 0 }}">
+        Code could not finish, this are some reasons why this happen.
+        - Plot name not defined. The first parameter of the shortcode is the name.
+        - There is a syntax error. check browser console.
+    </div>
+    <h1>{{ .Get 0 }}</h1>
+    <script>
+      function draw(){
+        test = document.getElementById("{{ .Get 0 }}");
+        if (test == null){
+            console.log("The plot name is not defined")
+            return
+        }
+    
+        fig = null
+        {{ .Inner | safeJS }}
+    
+        if (!fig) {
+            test.innerText = "ERROR: fig variable is not defined"
+            return
+        }
+        test.innerText = null
+        Plotly.plot(test ,fig);
+      }
+      draw()
+
+
+      fig = {
+        "data":[],
+        "layout":{
+            "margin":{"l":25,"r":5,"b":75,"t":50,"pad":4}
+        },
+        "config":{"responsive":true}
+        }
+    </script>
+    </div>
+
+  
+<div id="tester" style="width:90%;height:250px;"></div>
+<script>
+   
+TESTER = document.getElementById('tester');
+
+Plotly.plot( TESTER, [{
+    x: [1, 2, 3, 4, 5],
+    y: [1, 2, 4, 8, 16] }], { 
+    margin: { t: 0 } }, 
+    {showSendToCloud:true} );
+
+
+console.log( Plotly.BUILD );
+
+
+</script>

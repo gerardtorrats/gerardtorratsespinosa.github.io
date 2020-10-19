@@ -1,0 +1,27 @@
+{{ define "main" }}    
+<section class="section single-page">
+    <div class="container"> 
+        <div class="row">
+            
+            {{if .Params.sidebar}}
+                {{ partial "aside.html" . }}
+                
+            {{end}}
+
+             
+            <div class="{{if .Params.sidebar}} col-9 {{else}} col-12 {{end}}">                
+                
+                <p>{{.Params.subtitle}}</p>
+
+
+                {{ .Content  | safeHTML }}
+
+                
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{{ end }}
+

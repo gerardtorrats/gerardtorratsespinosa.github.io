@@ -1,0 +1,23 @@
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
+{{if not .Params.pageType}}
+    <script src="/jQuery/jquery.min.js"></script>
+
+{{end}}
+
+<script src="/bootstrap/bootstrap.min.js"></script>
+
+{{ partial "footer_highlightjs" . }}
+{{ partial "footer_mathjax" . }}
+
+<script>
+	TESTER = document.getElementById('tester');
+	Plotly.newPlot( TESTER, [{
+	x: [1, 2, 3, 4, 5],
+	y: [1, 2, 4, 8, 16] }], {
+	margin: { t: 0 } } );
+</script>
+
+{{- if .Params.Plotly }}
+    <script src="https://cdn.plot.ly/plotly-1.50.0.min.js"></script>
+{{- end }} 

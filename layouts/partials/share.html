@@ -1,0 +1,27 @@
+{{ if  site.Params.share  }}
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text={{ .Title | html }}&amp;url={{ .Permalink | html }}"
+         target="_blank" rel="noopener">
+        <img src="{{ "/images/twitter-share-button.png" | absURL }}" alt="twitter">
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ .Permalink | html }}&amp;title={{ .Title | html }}"
+         target="_blank" rel="noopener">
+         <img src="{{ "/images/linkedin-share-button.png" | absURL }}" alt="linkedin">
+         
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject={{ .Title | html }}&amp;body={{ .Permalink | html }}">
+         <img src="{{ "/images/email-share-button.png" | absURL }}" alt="linkedin">
+      </a>
+    </li>
+  </ul>
+</div>
+{{ end }}

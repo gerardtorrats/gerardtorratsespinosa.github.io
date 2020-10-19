@@ -1,0 +1,40 @@
+{{ "<!-- Sidebar -->" | safeHTML }}
+<!-- <div class="col-md-3  d-none d-md-block">
+    <div class="bg-white  py-100 posfixed">
+        
+        <div class="mb-50">
+            <h2 class=" mt-0">Categories</h2>
+            {{- if isset .Site.Taxonomies "categories" }}
+            {{- if not (eq (len .Site.Taxonomies.categories) 0) }}
+            <ul class="list-unstyled mb-0 black">
+                {{- range $name, $items := .Site.Taxonomies.categories }}
+                <li class=" mb-2">
+                    <a href="{{ "categories/" | relLangURL }}{{ $name | urlize | lower }}" class="d-block text-color py-10">{{ $name | title | humanize }}</a>
+                </li>
+                {{- end }}
+            </ul>
+            {{- end }}
+            {{- end }}
+        </div>
+    </div>
+</div>  -->
+
+<div class="col-md-3  d-none d-md-block">
+    <div class="bg-white  py-100 posfixed">
+        {{ "<!-- categories -->" | safeHTML }}
+        <div class="mb-50">
+            <h2 class=" mt-0">Tags</h2>
+            {{- if isset .Site.Taxonomies "tags" }}
+            {{- if not (eq (len .Site.Taxonomies.tags) 0) }}
+            <ul class="list-unstyled mb-0 black">
+                {{- range $name, $items := .Site.Taxonomies.tags }}
+                <li class=" mb-2">
+                    <a href="{{ "tags/" | relLangURL }}{{ $name | urlize | lower }}" class="d-block text-color py-10">{{ $name | title | humanize }}</a>
+                </li>
+                {{- end }}
+            </ul>
+            {{- end }}
+            {{- end }}
+        </div>
+    </div>
+</div>

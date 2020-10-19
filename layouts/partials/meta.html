@@ -1,0 +1,28 @@
+{{ template "_internal/google_analytics_async.html" . }}
+{{ if eq .Site.Params.openGraph true }}
+  {{ template "_internal/opengraph.html" . }}
+{{ end }}
+<meta name="description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Site.Params.Description }}{{ end }}" />
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta property="og:image" content="{{.Params.ogImage}}">
+<meta property="og:url" content="{{.Params.ogUrl }}">
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', '{{ site.GoogleAnalytics }}', 'auto');
+  {{ if site.Params.privacy_pack }}ga('set', 'anonymizeIp', true);{{ end }}
+  ga('require', 'eventTracker');
+  ga('require', 'outboundLinkTracker');
+  ga('require', 'urlChangeTracker');
+  ga('send', 'pageview');
+</script>
+<script async src="//www.google-analytics.com/analytics.js"></script>
+{{ "<!--Favicon-->" | safeHTML }}
+<link rel="shortcut icon" href="{{ "/images/favicon.ico" | absURL }} " type="image/x-icon">
+<link rel="icon" href="{{ "/images/favicon.ico" | absURL }} " type="image/x-icon">
+
+<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>

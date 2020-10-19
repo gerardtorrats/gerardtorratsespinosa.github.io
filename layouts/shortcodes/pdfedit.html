@@ -1,0 +1,27 @@
+{{ $noButton :=  .Get "class" }}
+
+{{if eq $noButton "no-button" }} 
+    <div class="text-center pdfdesktop">
+        <object data="{{ .Get "title" }}" type="application/pdf">
+            <iframe src="{{ .Get "src" }}"  {{if .Get "height" }} height="{{ .Get "height" }}" {{else}} height="480" {{end}}  {{if .Get "width" }} width="{{ .Get "width" }}" {{else}} width="480" {{end}} class="pdfedit"></iframe>
+        </object>
+    </div>
+
+{{else}}
+        <div class="text-center pdfdesktop d-none d-sm-none d-md-block">
+            <!-- <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~elizabethts/9.embed" height="525" width="100%"></iframe> -->
+
+        <object data="{{ .Get "title" }}" type="application/pdf">
+            <iframe src="{{ .Get "src" }}"  {{if .Get "height" }} height="{{ .Get "height" }}" {{else}} height="480" {{end}}  {{if .Get "width" }} width="{{ .Get "width" }}" {{else}} width="480" {{end}} class="pdfedit"></iframe>
+        </object>
+        </div>
+
+        <div class="text-center pdf download d-block d-sm-block d-md-none mb-2">
+            <a href="{{ .Get "src" }}" class="btn btn-info ">{{ .Get "title" }}</a>
+
+        </div>
+
+{{end}}
+
+
+

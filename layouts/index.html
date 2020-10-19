@@ -1,0 +1,15 @@
+{{- define "main" -}}
+
+{{if .Site.Params.underconstruction }}
+  {{ partial "underConstruction.html" . }}
+  
+{{else}}
+    {{ partial "about.html" . }}
+    {{ partial "recent-publications.html" . }}  
+     <!-- Uncomment this line to make Eecent Blog Posts section appear at the bottom: {{ partial "recent-blog-posts.html" . }}   -->
+    <!-- Uncomment this line to make News and Updates section appear at the bottom: {{ partial "news-update.html" . }} -->
+
+{{ end }}
+  
+  
+{{- end -}}

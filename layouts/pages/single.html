@@ -1,0 +1,39 @@
+{{ define "main" }}    
+<section class="section single-page">
+    <div class="container">         
+        <div class="row">
+           
+            {{if .Params.sidebar }}
+                <div class="col-3 aside black d-none d-lg-block">
+                    <div class="posfixed">
+                        {{ .TableOfContents }}
+                    </div>
+                </div>
+            {{end}}
+                <div class="{{if .Params.sidebar }} col-lg-9 col-sm-12 {{else}} col-12 {{end}} mb-2">
+                    <h1 class="title-page">{{ .Title }}</h1> 
+                    {{if .Params.subTitle}}
+                        <p class="text-muted">{{.Params.subTitle}}</p> 
+                    {{end}}
+                    {{if  .Params.btn    }}
+                        <div class="btn-links lg">
+                            {{range .Params.btn }}  
+                                {{ if .name }}                                      
+                                    <a class="btn btn-outline-primary btn-sm my-0 mr-1 " href="{{.url}}">{{.name}}</a>
+                                {{end}}
+                            {{ end }}
+                        </div>
+                    {{end}}
+                    <!-- {{if .Date}}     
+                        <span class="text-muted">{{.Date.Format "01, January, 2006 "}} </span>
+                    {{end}} -->
+                    
+
+                    {{ .Content  | safeHTML }}
+                </div>
+        </div> 
+    </div>
+</section>
+
+{{ end }}
+

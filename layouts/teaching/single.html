@@ -1,0 +1,25 @@
+{{ define "main" }}    
+<section class="section single-page">
+    <div class="container">         
+        <div class="row">
+            {{if .Params.sidebar }}
+                <div class="col-3 aside black d-none d-lg-block">
+                    <div class="posfixed">
+                        {{ .TableOfContents }}
+                    </div>
+                    
+                </div>
+            {{end}}
+
+            <div class="{{if .Params.sidebar}} col-9 {{else}} col-12 {{end}} mb-2">
+                <h1 class="title-page">{{ .Title }}</h1>      
+                <span  class="text-muted">{{.Params.subTitle}} </span>
+
+                {{ .Content  | safeHTML }}
+            </div>
+        </div>  
+    </div>
+</section>
+
+{{ end }}
+

@@ -1,0 +1,6 @@
+
+    <div class="text-center pdfdesktop">
+        <object data="{{ .Get "title" }}" type="application/pdf">
+            <iframe src="{{ .Get "src" }}"  {{if .Get "height" }} height="{{ .Get "height" }}" {{else}} height="480" {{end}}  {{if .Get "width" }} width="{{ .Get "width" }}" {{else}} width="480" {{end}}></iframe>
+        </object>
+    </div>

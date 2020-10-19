@@ -1,0 +1,56 @@
+<nav class="navbar navbar-light fixed-top navbar-expand-lg {{if .Params.pageType }} rtype{{end}}" id="navbar-main">
+    <div class="container">        
+    <!-- Brand and toggle get grouped for better mobile display -->
+      <a class="navbar-brand" href="{{ "/" | relLangURL }}">
+        {{- if site.Params.logo -}}
+            <img src="{{ printf "/img/%s" site.Params.logo | relURL }}" alt="{{ site.Title }}">
+        {{- else -}}
+          {{- site.Title -}}
+        {{- end -}}
+      </a>
+      {{ if or site.Menus.main .IsTranslated }}
+        <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="{{ i18n "toggle_navigation" }}">
+            <span><i class="fa fa-bars"></i></span>
+        </button>
+      {{ end }}
+
+      {{if not .Site.Params.underconstruction }}
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse " id="navbar">
+      <ul class="nav navbar-nav ml-auto navbar-pos">
+        {{ $currentPage := . }}
+
+        {{ $currentId := .Params.id }}
+        {{$section := .Section}}
+      {{ range .Site.Menus.main }}
+      {{ if .HasChildren }}
+      <li class="nav-item dropdown {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              {{ .Name }}
+          </a>
+          <div class="dropdown-menu" >
+              {{ range .Children }}
+              <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
+              {{ end }}
+          </div>
+      </li>
+      {{ else }}
+      <li class="nav-item {{if and (eq  $currentPage.Section "area") (eq .Name "Research")  }} active {{end}}   {{ if $currentPage.IsMenuCurrent "main" . }}active{{ else if  (eq .Identifier $currentId)   }} active {{ else if and (or  (eq  $currentPage.Section "tags")  (eq  $currentPage.Section "categories") )   (eq .Name "Blog" ) }}  active  {{ end }}">
+        
+          <a class="nav-link" href="{{ .URL }}">{{ .Name }} </a>
+      </li>
+      {{ end }}
+      {{ end }}
+
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+
+    {{end}}
+
+    </div>
+</nav>
+  
