@@ -1,1 +1,1 @@
-Website repository.
+Repository with website files. 
