@@ -10,7 +10,7 @@ summary: This study investigates the consequences of terrorist attacks for polit
 btn:
 - url: "https://doi.org/10.1073/pnas.1800302115"
   name: journal
-- url : "https://www.dropbox.com/s/atvhxiac67lsyfr/2018-pnas-eta-appendix.pdf?raw=1"
+- url : "https://www.dropbox.com/s/ukk29kdxvpy8kt2/2018-pnas-eta-appendix.pdf?raw=1"
   name: appendix
 - url : "https://doi.org/10.7910/DVN/VN55BE"
   name: data
