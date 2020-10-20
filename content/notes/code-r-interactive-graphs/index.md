@@ -24,14 +24,14 @@ catType: "Coding"
 [Click here]({{< file-download url="notes/code-r-interactive-graphs/plotly.Rmd" >}}) to download the Rmarkdown file that generates the output below.
 
 
-{{< html-window src="/notes/code-r-interactive-graphs/plotly.html" title=" "width="100%" height="800" >}}
+{{< html-window src="/notes/code-r-interactive-graphs/plotly.html" title=" "width="100%"  >}}
 
 ## Plotly Example 2
 
 [Click here]({{< file-download url="notes/code-r-interactive-graphs/plotly-no-subtitles.Rmd" >}}) to download the Rmarkdown file that generates the output below.
 
 
-{{< html-window src="/notes/code-r-interactive-graphs/plotly-no-subtitles.html" title=" " width="100%" height="800" >}}
+{{< html-window src="/notes/code-r-interactive-graphs/plotly-no-subtitles.html" title=" " width="100%" >}}
 
 
 ## Plotly Example 3
@@ -39,4 +39,4 @@ catType: "Coding"
 [Click here]({{< file-download url="notes/code-r-interactive-graphs/plotly-no-toc.Rmd" >}}) to download the Rmarkdown file that generates the output below.
 
 
-{{< html-window src="/notes/code-r-interactive-graphs/plotly-no-toc.html" title=" " width="100%" height="800" >}}
+{{< html-window src="/notes/code-r-interactive-graphs/plotly-no-toc.html" title=" " width="100%" >}}
