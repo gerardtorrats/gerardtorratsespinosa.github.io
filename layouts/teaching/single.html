@@ -12,7 +12,7 @@
             {{end}}
 
             <div class="{{if .Params.sidebar}} col-9 {{else}} col-12 {{end}} mb-2">
-                <h1 class="title-page">{{ .Title }}</h1>      
+                <h4 class="title-page">{{ .Title }}</h4>    
                 <span  class="text-muted">{{.Params.subTitle}} </span>
 
                 {{ .Content  | safeHTML }}

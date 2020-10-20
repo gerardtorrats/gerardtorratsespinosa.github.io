@@ -17,14 +17,14 @@ btn:
 
 catType: "Columbia University"
 ---
-## Syllabus
+### Syllabus
 
-Coming soon.
+Coming soon.  
 
 
 &nbsp;
 
-## Lecture Notes
+### Lecture Notes
 
 Coming soon. 
 
@@ -32,6 +32,6 @@ Coming soon.
 &nbsp;
 
 
-## Assignments
+### Assignments
 
 Coming soon. 
