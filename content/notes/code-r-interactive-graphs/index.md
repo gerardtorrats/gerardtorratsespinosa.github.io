@@ -3,7 +3,7 @@ title: "Using Plotly to Create Interactive Graphs in R"
 subTitle: "Examples and Applications"
 id: notes
 sidebar: true
-type: pages
+type: post
 date: "2020-10-15"
 Plotly: true
 
