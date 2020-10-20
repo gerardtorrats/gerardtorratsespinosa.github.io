@@ -26,7 +26,7 @@ Coming soon.
 
 ## Lecture Notes
 
-Coming soon.
+Coming soon. 
 
 
 &nbsp;
