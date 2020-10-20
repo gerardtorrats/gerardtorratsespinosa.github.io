@@ -27,6 +27,7 @@ catType: "Coding"
 
 {{< html-window src="/notes/code-r-interactive-graphs/plotly.html" title=" "width="100%"  >}}
 
+{{< pdfedit src="/notes/code-r-interactive-graphs/plotly.html" title="Download PDF" height="600" width="100%" >}}
 
 {{< pdfedit src="/research/2017-jue-mobility/2017-jue-mobility-article.pdf" title="Download PDF" height="600" width="100%" >}}
 
