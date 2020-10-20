@@ -74,11 +74,11 @@ pygmentsStyle = "manni"
   weight = 5
 
 
-[[menu.main]]
-  name = "Notes"
-  url = "/notes"
-  identifier = "notes"
-  weight = 6
+#[[menu.main]]
+#  name = "Notes"
+#  url = "/notes"
+#  identifier = "notes"
+#  weight = 6
   
 [[menu.main]]
   name = "Media"
@@ -95,11 +95,11 @@ pygmentsStyle = "manni"
 #  weight = 8
 
   
-[[menu.main]]
-   name = "Blog"
-   url = "/blog"
-   identifier = "blog"
-   weight = 9
+#[[menu.main]]
+#   name = "Blog"
+#   url = "/blog"
+#   identifier = "blog"
+#   weight = 9
 
 
 [params]
