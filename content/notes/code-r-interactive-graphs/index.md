@@ -25,7 +25,7 @@ catType: "Coding"
 [Click here]({{< file-download url="notes/code-r-interactive-graphs/plotly.Rmd" >}}) to download the Rmarkdown file that generates the output below.
 
 
-{{< pdfedit src="/notes/code-r-interactive-graphs/plotly.html" title="Open HTML" height="800" width="100%"  >}}
+{{< pdfedit src="/notes/code-r-interactive-graphs/plotly.html" title="Open HTML" height="800" width="90%"  >}}
 
 
 ## Plotly Example 2
@@ -33,7 +33,7 @@ catType: "Coding"
 [Click here]({{< file-download url="notes/code-r-interactive-graphs/plotly-no-subtitles.Rmd" >}}) to download the Rmarkdown file that generates the output below.
 
 
-{{< pdfedit src="/notes/code-r-interactive-graphs/plotly-no-subtitles.html" title="Open HTML" height="800" width="100%" >}}
+{{< pdfedit src="/notes/code-r-interactive-graphs/plotly-no-subtitles.html" title="Open HTML" height="800" width="90%" >}}
 
 
 ## Plotly Example 3
@@ -41,4 +41,4 @@ catType: "Coding"
 [Click here]({{< file-download url="notes/code-r-interactive-graphs/plotly-no-toc.Rmd" >}}) to download the Rmarkdown file that generates the output below.
 
 
-{{< pdfedit src="/notes/code-r-interactive-graphs/plotly-no-toc.html" title="Open HTML" height="800" width="100%" >}}
+{{< pdfedit src="/notes/code-r-interactive-graphs/plotly-no-toc.html" title="Open HTML" height="800" width="90%" >}}
