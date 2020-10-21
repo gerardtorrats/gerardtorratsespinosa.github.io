@@ -1,8 +1,8 @@
 <style type="text/css">
 
 .image-cropper {
-  width: 225px;
-  height: 225px;
+  width: 200px;
+  height: 200px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
@@ -28,19 +28,19 @@
 
                     <div class="portrait-title text-center">
                       <!-- <h2 itemprop="name">{{ $person.name }}</h2> -->
-                      {{ with $person.role }}<h3 itemprop="jobTitle" class="mt-2">{{ . | safeHTML | emojify }}</h3>{{ end }}
-                      <h3><a href="{{ $person.cv}}">{{ with $person.cvtext }} {{ . | safeHTML | emojify }} {{ end }}</a></h3> 
-                      <h3><a href="{{ $person.office_hours}}">{{ with $person.office_hours_text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   
-                      {{ with $person.additional_text }}<p itemprop="jobTitle" class="mt-2">{{ . | safeHTML | emojify }}</p>{{ end }}      
+                      {{ with $person.role }}<h3 itemprop="jobTitle" class="mt-2">{{ . | safeHTML | emojify }}</h3>{{ end }} <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
+                      <h3><a href="{{ $person.link1}}">{{ with $person.link1text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3> <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
+                      <h3><a href="{{ $person.link2}}">{{ with $person.link2text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
+                      {{ with $person.addtext }}<h3 itemprop="jobTitle" class="mt-2">{{ . | safeHTML | emojify }}</h3>{{ end }}  <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
                     
                       {{if  $person.courses}}
                         <ul class="courselist">
                      
                             {{ range $person.courses }}
                             <li>
-                            {{ with .course }} {{.}}{{ end }}
+                           <h3> {{ with .course }} {{.}}{{ end }}
                             <span >{{ .institution }}</span>
-                            <em>{{ .year }}</em>
+                            <em>{{ .year }}</em></h3>
                             </li>
                             {{ end }}
                             
@@ -84,8 +84,10 @@
                       </li>
                       {{ end }}
                        <div class="portrait-title text-center">
-                       <h3><a href="{{ $person.emailme}}">{{ with $person.emailmetext }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>
-                          {{ with $person.additional_text2 }}<h3 itemprop="jobTitle" class="mt-2">{{ . | safeHTML | emojify }}</h3>{{ end }}   
+                          <h3><a>  </a></h3> 
+                      <h3><a href="{{ $person.link3}}">{{ with $person.link3text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
+                      <h3><a href="{{ $person.link4}}">{{ with $person.link4text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
+                          {{ with $person.addtext2 }}<h3 itemprop="jobTitle" class="mt-2">{{ . | safeHTML | emojify }}</h3>{{ end }}   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
                       </div>
                       
 

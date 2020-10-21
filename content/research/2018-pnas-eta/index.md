@@ -10,8 +10,6 @@ summary: This study investigates the consequences of terrorist attacks for polit
 btn:
 - url: "https://doi.org/10.1073/pnas.1800302115"
   name: journal
-- url : "https://www.dropbox.com/s/ukk29kdxvpy8kt2/2018-pnas-eta-appendix.pdf?raw=1"
-  name: appendix
 - url : "https://doi.org/10.7910/DVN/VN55BE"
   name: data
 # Project  image 
@@ -31,27 +29,21 @@ catType: "Journal Articles"
 ---
 **Abstract**: This study investigates the consequences of terrorist attacks for political behavior by leveraging a natural experiment in Spain. We study eight attacks against civilians, members of the military, and police officers perpetrated between 1989 and 1997 by Euskadi Ta Askatasuna (ETA), a Basque terrorist organization that was active between 1958 and 2011. We use nationally and regionally representative surveys that were being fielded when the attacks occurred to estimate the causal effect of terrorist violence on individuals’ intent to participate in democratic elections as well as on professed support for the incumbent party. We find that both lethal and nonlethal terrorist attacks significantly increase individuals’ intent to participate in a future democratic election. The magnitude of this impact is larger when attacks are directed against civilians than when directed against members of the military or the police. We find no evidence that the attacks change support for the incumbent party. These results suggest that terrorist attacks enhance political engagement of citizens.
 
-{{< pdfedit src="/research/2018-pnas-eta/2018-pnas-eta-article.pdf" title="Download PDF" height="600" width="90%" >}}
-
 If you are having issues downloading the PDF with the article, [click here]({{< file-download url="/research/2018-pnas-eta/2018-pnas-eta-article.pdf" >}}).
 
-&nbsp;
+{{< pdfedit src="/research/2018-pnas-eta/2018-pnas-eta-article.pdf" title="Download PDF" height="600" width="90%" >}}
 
 ## Appendix
 
+If you are having issues downloading the PDF with the appendix, [click here]({{< file-download url="/research/2018-pnas-eta/2018-pnas-eta-appendix.pdf" >}}).
 
 {{< pdfedit src="/research/2018-pnas-eta/2018-pnas-eta-appendix.pdf" title="Download PDF" height="600" width="90%" >}}
 
-If you are having issues downloading the PDF with the appendix, [click here]({{< file-download url="/research/2018-pnas-eta/2018-pnas-eta-appendix.pdf" >}}).
 
-
-&nbsp;
 
 ## Replication Files
 
 Data and code are available at [Harvard Dataverse](https://doi.org/10.7910/DVN/VN55BE).
-
-&nbsp;
 
 ## Press Coverage
 

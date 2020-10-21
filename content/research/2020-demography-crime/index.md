@@ -10,8 +10,6 @@ summary:  This study investigates the effect of violent crime on school district
 btn:
 - url: "https://doi.org/10.1007/s13524-019-00850-x"
   name: journal
-- url : "https://www.dropbox.com/s/5qq26ju1lzdiivn/2020-demography-crime-appendix.pdf?raw=1"
-  name: appendix
 # Project  image 
 images:
 - path: "research/2020-demography-crime/2020-demography-crime-image1.png"
@@ -29,23 +27,15 @@ catType: "Journal Articles"
 ---
 **Abstract**: This study investigates the effect of violent crime on school district–level achievement in English language arts (ELA) and mathematics. The research design exploits variation in achievement and violent crime across 813 school districts in the United States and seven birth cohorts of children born between 1996 and 2002. The identification strategy leverages exogenous shocks to crime rates arising from the availability of federal funds to hire police officers in the local police departments where the school districts operate. Results show that children who entered the school system when the violent crime rate in their school districts was lower score higher in ELA by the end of eighth grade, relative to children attending schools in the same district but who entered the school system when the violent crime rate was higher. A 10% decline in the violent crime rate experienced at ages 0–6 raises eighth-grade ELA achievement in the district by 0.03 standard deviations. Models that estimate effects by race and gender show larger impacts among Black children and boys. The district-wide effect on mathematics achievement is smaller and statistically nonsignificant. These findings extend our understanding of the geography of educational opportunity in the United States and reinforce the idea that understanding inequalities in academic achievement requires evidence on what happens inside as well as outside schools.
 
-{{< pdfedit src="/research/2020-demography-crime/2020-demography-crime-article.pdf" title="Download PDF" height="600" width="90%" >}}
-
 If you are having issues downloading the PDF with the article, [click here]({{< file-download url="/research/2020-demography-crime/2020-demography-crime-article.pdf" >}}).
 
-
-&nbsp;
+{{< pdfedit src="/research/2020-demography-crime/2020-demography-crime-article.pdf" title="Download PDF" height="600" width="90%" >}}
 
 ## Appendix
 
-
-{{< pdfedit src="/research/2020-demography-crime/2020-demography-crime-appendix.pdf" title="Download PDF" height="600" width="90%" >}}
-
 If you are having issues downloading the PDF with the appendix, [click here]({{< file-download url="/research/2020-demography-crime/2020-demography-crime-appendix.pdf" >}}).
 
-
-
-&nbsp;
+{{< pdfedit src="/research/2020-demography-crime/2020-demography-crime-appendix.pdf" title="Download PDF" height="600" width="90%" >}}
 
 ## Replication Files
 

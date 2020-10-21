@@ -5,10 +5,10 @@ languageCode = "en-us"
 # Title of your site
 title = "Gerard Torrats-Espinosa"
 # Used as meta data; describe your site to make Google Bots happy 
-description = "Assitant Professor, Department of Sociology and Data Science Institute at Columbia University"
+description = "Assitant Professor of Sociology at Columbia University"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 #Put in your tracking code without quotes like this: UA-XXXXXX..
-googleAnalytics = ""
+googleAnalytics = "UA-180714519-1"
 # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
 openGraph = true
 copyright = "© Gerard Torrats-Espinosa &bull; Built with <a href='https://gohugo.io/' target='_blank'>Hugo</a> &bull; Powered by <a href='https://github.com/' target='_blank'>GitHub</a> and <a href='https://www.netlify.com/' target='_blank'>Netlify</a>"
