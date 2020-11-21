@@ -3,7 +3,7 @@ bio: Assistant Professor in Sociology at Columbia University
 email: ""
 name: Gerard Torrats-Espinosa
 role: "Assistant Professor <br>  Department of Sociology <br> Columbia University" 
-link1: "/cv"
+link1: "/cv/cv-torrats-espinosa-2020-fall.pdf"
 link1text: "Download my CV"
 link2: ""
 link2text: ""
@@ -44,6 +44,10 @@ social:
   icon_pack: fa
   image: /images/github-logo-filled.png 
   link: https://github.com/gerardtorrats
+- icon: strava
+  icon_pack: fa
+  image: /images/strava-logo.png 
+  link: https://www.strava.com/athletes/20864993
 
 ---
 
