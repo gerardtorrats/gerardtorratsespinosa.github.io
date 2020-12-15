@@ -6,7 +6,7 @@ id: research
 date: "2020-12-10"
 
 linkType: external  # internal  or external
-permalinks: https://www.dropbox.com/s/kluaa8uxp5pohxu/wp-covid-segregation-article.pdf?raw=1
+permalinks: https://www.dropbox.com/s/kluaa8uxp5pohxu/2021-pnas-covid-article.pdf?raw=1
 
 
 # Summary. An optional shortened abstract.
@@ -14,16 +14,16 @@ summary:
 
 
 btn:
-- url : "/research/wp-covid-segregation/wp-covid-segregation-appendix.pdf" 
+- url : "/research/2021-pnas-covid/2021-pnas-covid-appendix.pdf" 
   name: appendix
   
 # Project  image 
 images:
-- path: "research/wp-covid-segregation/wp-covid-segregation-image1.png"
+- path: "research/2021-pnas-covid/2021-pnas-covid-image1.png"
   caption: ""
-- path: "research/wp-covid-segregation/wp-covid-segregation-image2.png"
+- path: "research/2021-pnas-covid/2021-pnas-covid-image2.png"
   caption: ""  
-- path: "research/wp-covid-segregation/wp-covid-segregation-image3.png"
+- path: "research/2021-pnas-covid/2021-pnas-covid-image3.png"
   caption: ""  
   
 # Area
