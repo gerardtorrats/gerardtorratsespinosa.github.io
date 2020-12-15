@@ -2,8 +2,8 @@
 title: "Using Machine Learning to Estimate the Effect of Racial Segregation on COVID-19 Mortality"
 Journal: "Proceedings of the National Academy of Sciences"
 YearCoauthors: "Forthcoming"
-id: working-papers
-date: " "
+id: research
+date: "2020-12-10"
 
 linkType: external  # internal  or external
 permalinks: https://www.dropbox.com/s/kluaa8uxp5pohxu/wp-covid-segregation-article.pdf?raw=1
@@ -33,7 +33,7 @@ images:
 area: 
   - Segregation
 
-catType: "Working Papers"
+catType: "Journal Articles"
 ---
 
 **Abstract**:  
