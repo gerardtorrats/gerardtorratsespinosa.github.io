@@ -47,6 +47,8 @@ If you are having issues downloading the PDF with the appendix, [click here]({{<
 
 {{< pdfedit src="/research/2021-pnas-covid/2021-pnas-covid-appendix.pdf" title="Download PDF" height="600" width="90%" >}}
 
+## Replication Files
 
+Coming soon. 
 
 
