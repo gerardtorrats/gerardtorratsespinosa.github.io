@@ -1,0 +1,479 @@
+---
+title: "Bayesian Statistics"
+subtitle: "Introduction"
+author:  
+date: "Fall 2020"
+output:
+  html_document:
+    number_sections: false
+    toc: false
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+---
+
+
+<style type="text/css">
+
+
+h1.title { /* Title */
+    font-size: 30px;
+    color: DarkBlue;
+    font-weight: normal;
+    font-style: normal;
+}
+h3.subtitle { /* Subtitle */
+    font-size: 20px;
+    color: DarkBlue;
+    font-weight: normal;
+    font-style: normal;
+}
+h4.author { /* Author */
+    font-size: 20px;
+    color: DarkBlue;
+    font-weight: normal;
+    font-style: normal;
+}
+h4.date { /* Date */
+    font-size: 14px;
+    color: DarkBlue;
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+h1 { /* Header 1 */
+    font-size: 20px;
+    color: Blue;
+    font-weight: normal; <!-- this could be:  font-weight: bold -->
+    font-style: normal;
+}
+h2 { /* Header 2 */
+    font-size: 18px;
+    color: Blue;
+    font-weight: normal;
+    font-style: normal;
+}
+h3 { /* Header 3 */
+    font-size: 16px;
+    color: Blue;
+    font-weight: normal;
+    font-style: normal;
+}
+h4 { /* Header 4 */
+    font-size: 14px;
+    color: Blue;
+    font-weight: normal;
+    font-style: normal;
+}
+h5 { /* Header 5 */
+    font-size: 12px;
+    color: Black;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{ /* Normal  */
+      font-size: 12px;
+      font-family: "Verdana", Times, serif;
+  }
+td {  /* Table  */
+  font-size: 8px;
+}
+
+
+code.r{ /* Code block */
+    font-size: 12px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 12px;
+}
+</style>
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Examples from Bayesian Stats Course (Columbia, Fall 2020)
+
+## Example 1a: Bayes Rule
+
+
+You go to the doctor for a COVID-19 rapid test. Let `theta` represent your true state: `theta` = 1 if you are infected with the virus, and `theta` = 0 if you are not. Let `y` denote the result of the test: `y` = 1 if the test comes back positive and `y` = 0 if the test is negative. The probability of a correct result for an infected subject is called the sensitivity of the test (`Pr(y=1|theta=1)`), we will denote it `p` here. The probability of correct result for one not infected with the virus is called the specificity (`Pr(Y=0|theta=0)`), denoted as `q.`  
+
+Do you have the virus? Of course you don’t know. In Bayesian statistics we describe our uncertainty about the world by assigning probabilities to various states. Suppose your prior probability
+of being infected is `pi`. That is, the marginal probability `Pr(theta = 1) = pi` .
+
+With this information we can define the following:
+
+- `pi`  as the prior prob of infection ("prevalence"): `pi = Pr(theta=1)`
+- `q0` is the false positive probability: `q0 = Pr(Y=1|theta=0)`
+- `q1` is the true positive probability: `q1 = Pr(Y=1|theta=1)`. This is also called the sensitivity of the test; `1-q0` is the specificity of the test.
+
+
+We set the following values in R:
+```{r}
+pi <- .04   # 20% of population is infected
+q1 <- .90  # test has sensitivity of .90
+q0 <- .08  # test has specificity of .92
+```
+
+
+With this we can compute the posterior probabilities, given test result. 
+
+The probability of infection, before the test result is available is `pi`:
+```{r}
+pi  # Prob of infection, before test result is available 
+
+```
+
+The probability of infection given a positive test is:
+$$Pr(\theta|y_1 =1) = \frac{Pr(\theta = 1, y_1 = 1)}{Pr(y_1=1)} = \frac{Pr(\theta=1)Pr(y_1=1|\theta=1)}{Pr(y_1=1)} = \frac{\pi p }{\pi p + (1-\pi)q}$$
+
+
+```{r}
+
+pi * q1 / (pi*q1 + (1-pi)*q0)  # Prob of infection given positive test result
+
+```
+
+The probability of infection given a negative test is:
+$$Pr(\theta|y_1 =0) = \frac{Pr(\theta = 1, y_1 = 1)}{Pr(y_1=0)} = \frac{Pr(\theta=1)Pr(y_1=0|\theta=1)}{Pr(y_1=0)} = \frac{\pi (1-p) }{\pi (1-p) + (1-\pi)(1-q)}$$
+
+```{r}
+
+pi*(1-q1) / (pi*(1-q1) + (1-pi)*(1-q0))  # Prob of infection if test negative
+```
+
+Plot posterior probability versus prior probability:
+
+```{r}
+post.prob <- function(pi, q0, q1)
+{
+  pi * q1 / (pi*q1 + (1-pi)*q0)
+}
+
+grid <- seq(.01, .99, .01)
+
+plot(grid, post.prob(pi=grid, q0=q0, q1=q1), type="l", 
+     xlab="Prior probability", ylab="Posterior prob", 
+     main="Prob of infection given positive test", ylim=c(0,1))
+```
+
+That's how the posterior prob varies with prior prob
+
+What about the sensitivity and specificity of the test?
+
+```{r}
+op <- par(mfrow=c(1,2))
+
+plot(grid, post.prob(pi=pi, q1=grid, q0=q0), type="l", 
+     xlab="Sensitivity of test", ylab="Posterior prob", 
+     main="Prob of infection given positive test", ylim=c(0,1))
+
+plot(grid, post.prob(pi=pi, q1=q1, q0=1-grid), type="l",
+     xlab="Specificity of test", ylab="Posterior prob", 
+     main="Prob of infection given positive test", ylim=c(0,1))
+
+par(op)
+```
+ 
+### Monte Carlo approximation 
+Simulate the joint distribution of theta and Y:
+```{r}
+
+S <- 1000;  theta <- NULL;  y <- NULL;
+
+for(s in 1:S)
+{
+  theta[s] <- rbinom(1, 1, pi)
+  prob <- ifelse(theta[s]==1, q1, q0)
+  y[s] <- rbinom(1, 1, prob)
+}
+
+table(theta, y) / S  # approximate joint distribution
+
+mean(theta[y==1])  #  Monte Carlo approx to posterior prob
+```
+
+
+Of course there's no real need for Monte Carlo, when the exact  joint distribution is available by straightforward calculation:
+```{r}
+
+joint <- matrix(c((1-pi)*(1-q0), pi*(1-q1), (1-pi)*q0, pi*q1), 2,2)
+
+rownames(joint) <- c("theta=0", "theta=1")
+
+colnames(joint) <- c("y=0", "y=1")
+
+joint
+
+joint[2,2] / sum(joint[,2])
+```
+
+
+## Example 1b: Beta-Binomial Model
+
+Create data:
+
+```{r}
+rm(list=ls())
+
+n <- 100;  y <- 60;
+
+theta <- seq(0,1,.01)
+```
+
+
+
+Hyperparameters:
+
+```{r}
+a          <- c(1,.5,2,20)
+b          <- c(1,.5,2, 1)
+
+```
+
+
+Calculations:
+
+```{r}
+post_mean  <- (y+a)/(n+a+b)
+post_var   <- (y+a)*(n-y+b)/((n+a+b)^2 * (n+a+b+1))
+post_sd    <- sqrt(post_var)
+post_PG5   <- 1-pbeta(0.5,a+y,b+n-y)
+pri_mean   <- (a)/(a+b)
+pri_var    <- (a)*(b)/((a+b)*(a+b)*(a+b+1))
+pri_sd     <- sqrt(pri_var)
+pri_PG5    <- 1-pbeta(0.5,a,b)
+
+```
+
+
+
+Summary plot of prior and posterior on same axes 
+```{r}
+plot(theta,dbeta(theta,1,1),lwd=2,type="l",
+     xlab=expression(theta), ylab="Density",
+     ylim=c(0,10), cex.lab=1.5)  
+
+legend("topleft", c("Prior","Posterior"), col=1:2,
+       lwd=2, inset=0.05, cex=1.25)
+
+lines(theta, dbeta(theta,y+1,n-y+1), col=2, lwd=2)
+```
+
+
+Consider four different priors:
+
+```{r}
+op <- par(mfrow=c(2,2))
+
+for(j in 1:4)
+{
+  plot(theta,dbeta(theta,a[j],b[j]), lwd=2, type="l", ylim=c(0,10), 
+       xlab=expression(theta), ylab="Density",cex.lab=1.25)  
+  legend("topleft",c("Prior","Posterior"),col=1:2,lwd=2,inset=0.05)
+  lines(theta,dbeta(theta,y+a[j],n-y+b[j]),col=2,lwd=2)
+}
+
+par(op)
+
+```
+
+Compare the four priors to each other (ignoring data)
+
+```{r}
+plot(NA, xlim=0:1, xlab=expression(theta), ylab="Prior density",
+     ylim=c(0,10), cex.lab=1.25)  
+
+for(j in 1:4)
+{
+  lines(theta, dbeta(theta, a[j], b[j]), col=j, lwd=2)
+}
+
+legend("topleft",
+       c("a=1    b=1","a=0.5 b=0.5", "a=2    b=2","a=20  b=1"), 
+       col=1:4, lwd=2, inset=0.05, cex=1.25)
+```
+
+
+
+Compare the four posteriors (single set of axes)
+
+```{r}
+plot(NA, xlim=0:1, xlab=expression(theta), ylab="Posterior density",
+     ylim=c(0,10), cex.lab=1.25)  
+
+for(j in 1:4)
+{
+  lines(theta, dbeta(theta, y+a[j], n-y+b[j]), col=j, lwd=2)
+}
+
+legend("topleft",
+       c("a=1    b=1","a=0.5 b=0.5", "a=2    b=2","a=20  b=1"),
+       col=1:4, lwd=2, inset=0.05, cex=1.25)
+```
+
+
+
+Numerical summaries
+
+```{r}
+round(cbind(a, b, pri_mean, pri_sd, pri_PG5, 
+            post_mean, post_sd, post_PG5), 2)
+```
+
+
+## Example 1c: Summarizing a Posterior
+
+
+```{r}
+rm(list=ls()); set.seed(20200909); 
+```
+
+
+Data
+
+```{r}
+y <- 8; n <- 10
+```
+
+
+
+The posterior is theta|y~Beta(A,B)
+
+```{r}
+A <- y+1; B <- n-y+1
+```
+
+
+
+Posterior mean
+
+```{r}
+A/(A+B)
+```
+
+ 
+Posterior standard deviation
+
+```{r}
+sqrt(A*B/((A+B)*(A+B)*(A+B+1)))
+```
+
+
+Posterior 95% credible interval
+
+```{r}
+qbeta(c(0.025,0.975),A,B)
+```
+
+
+Posterior probability that theta<0.5
+
+```{r}
+pbeta(0.5,A,B)
+```
+
+### Inference about odds 
+
+If theta is a prob the odds are gamma = theta/(1-theta)
+
+```{r}
+theta <- rbeta(1000, A, B)
+```
+
+
+Approximate the posterior mean and SD using Monte Carlo
+
+```{r}
+mean(theta); sd(theta);
+```
+
+
+Transform to odds
+
+```{r}
+gamma <- theta/(1-theta)
+```
+
+
+Approximate the posterior mean and SD
+
+```{r}
+mean(gamma); sd(gamma);
+```
+
+
+Show posterior density, mark mean, median and mode
+
+```{r}
+vline <- function(x, A, B, lwd=1, col=1, lty=1)
+{
+  theta <- seq(0, 1, length=1000)
+  k     <- theta[which.min(abs(theta-x))]
+  lines(c(k,k), c(0,dbeta(k,A,B)), lwd=lwd, col=col, lty=lty) 
+}
+
+MAP <- (A-1)/(A+B-2)     # Posterior mode
+
+MN  <- A/(A+B)           # Posterior mean
+
+MD  <- qbeta(0.5, A, B)  # Posterior median
+
+theta <- seq(0,1,length=100)
+
+plot(theta,dbeta(theta,A,B), lwd=2, type="l",
+     xlab=expression(theta), ylab="Posterior density")
+
+vline(MN,  A, B, lwd=2, col=1)
+
+vline(MAP, A, B, lwd=2, col=2)
+
+vline(MD,  A, B, lwd=2, col=3)
+
+legend("topleft",c("Post mean","MAP","Post median"), 
+       col=1:3, lwd=2, bty="n", cex=1.25)
+```
+
+
+
+### Bayesian credible intervals
+
+```{r}
+plot(theta, dbeta(theta,A,B), type="l", lwd=2, 
+     xlab=expression(theta), ylab="Posterior density")
+
+vline(qbeta(0.1,  A,B), A, B, lwd=2, col=1)
+
+vline(qbeta(0.9,  A,B), A, B, lwd=2, col=1)
+
+vline(qbeta(0.05, A,B), A, B, lwd=2, col=2)
+
+vline(qbeta(0.95, A,B), A, B, lwd=2, col=2)
+
+vline(qbeta(0.025,A,B), A, B, lwd=2, col=3)
+
+vline(qbeta(0.975,A,B), A, B, lwd=2, col=3)
+
+legend("topleft",
+       c("80% cred set","90% cred set","95% cred set"),
+       col=1:3, lwd=2, bty="n", cex=1.25)
+```
+
+
+
+
+
+
+
+
+
+
+

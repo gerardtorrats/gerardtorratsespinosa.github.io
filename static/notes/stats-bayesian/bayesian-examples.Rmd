@@ -1,8 +1,8 @@
 ---
 title: "Examples of Bayesian Applications"
 subtitle: ""
-author:  
-date: ""
+author:  "Gerard Torrats-Espinosa"
+date: "Fall 2020"
 output:
   html_document:
     number_sections: false
@@ -29,20 +29,20 @@ h3.subtitle { /* Subtitle */
 }
 h4.author { /* Author */
     font-size: 16px;
-    color: Gray;
+    color: Black;
     font-weight: normal;
     font-style: normal;
 }
 h4.date { /* Date */
     font-size: 14px;
-    color: Gray;
+    color: Black;
     font-weight: normal;
     font-style: italic;
 }
 
 
 h1 { /* Header 1 */
-    font-size: 20px;
+    font-size: 22px;
     color: DarkBlue;
     font-weight: bold; <!-- this could be:  font-weight: bold -->
     font-style: normal;
@@ -66,7 +66,7 @@ h4 { /* Header 4 */
     font-style: normal;
 }
 h5 { /* Header 5 */
-    font-size: 12px;
+    font-size: 14px;
     color: Black;
     font-weight: normal;
     font-style: normal;
@@ -74,8 +74,9 @@ h5 { /* Header 5 */
 
 
 body{ /* Normal  */
-      font-size: 12px;
-      font-family: "Verdana", Times, serif;
+      font-size: 14px;
+       color: Black;
+      font-family: "Arial", Times, serif;
   }
 td {  /* Table  */
   font-size: 8px;
@@ -95,88 +96,190 @@ pre { /* Code block - determines code spacing between lines */
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Example 1: Bayes Rule
+
+# Theory and Concepts^[These notes are summarized from Reich and Ghosh's book *Bayesian Statitical Methods*.]
+
+# Basics of Bayesian Inference
+
+## Probability Background
+
+Difference between probability and statistics:
+
+- Probability: Assumes a mathematical model that represents the process of interest and uses that model to compute the likelihood that some events happen (e.g., what is the probability of observing five heads in a row flipping a fair coin?).
+- Statistics: Uses data to refine the probability model and test hypothesis related to the underlying process that generated the data (e.g., given that we observed five heads in a row, can we conclude that the coin is biased?).
+
+### Univariate Distributions
+
+Notation:
+
+-  $X$ is the random variable that takes specific values $x$.
+- $S$ is the support of $X$.
+
+#### Discrete Distributions
+
+For a discrete random variable $X$, the probability mass function (PMF) $f(x)$ assigns a probability to each element of $X$'s support:
+$$Prob(X=x) = f(x)$$
+
+The probability of the even that $X$ falls in a set $S' \subset S$ is the sum over elements in $S'$.
+
+$$Prob(X \in S') = \sum_{x \in S'}  f(x) $$
+
+This helps us define the cumulative density function (CDF):
+
+$$F(x) = Prob(X \leq x) = \sum_{c \leq x} f(c) $$
+
+A PMF is a function from the support of X to the probability of events. 
+
+It is useful to summarize the function using a few interpretable quantities such as the mean and the variance.
+
+The expected value or mean is:
+
+$$ E(X) = \sum_{x \in S} x f(x)$$
+ 
+The variance measures the spread around the mean via the expected suqred deviation from the center of the distribution:
+
+$$Var(X) = E \{ |X-E(X)^2| \} = \sum_{x \in S} [x - E(X)]^2 f(x)$$
+
+# Applications^[Some of this examples are inspired in Ronald Neath's course.]
 
 
-You go to the doctor for a COVID-19 rapid test. Let `theta` represent your true state: `theta` = 1 if you are infected with the virus, and `theta` = 0 if you are not. Let `y` denote the result of the test: `y` = 1 if the test comes back positive and `y` = 0 if the test is negative. The probability of a correct result for an infected subject is called the sensitivity of the test (`Pr(y=1|theta=1)`), we will denote it `p` here. The probability of correct result for one not infected with the virus is called the specificity (`Pr(Y=0|theta=0)`), denoted as `q.`  
 
-Do you have the virus? Of course you don’t know. In Bayesian statistics we describe our uncertainty about the world by assigning probabilities to various states. Suppose your prior probability
-of being infected is `pi`. That is, the marginal probability `Pr(theta = 1) = pi` .
 
-With this information we can define the following:
+## Example 1: Bayes Rule and COVID-19 Testing
 
-- `pi`  as the prior prob of infection ("prevalence"): `pi = Pr(theta=1)`
-- `q0` is the false positive probability: `q0 = Pr(Y=1|theta=0)`
-- `q1` is the true positive probability: `q1 = Pr(Y=1|theta=1)`. This is also called the sensitivity of the test; `1-q0` is the specificity of the test.
+### Taking One COVID-19 Test
 
+
+You take a COVID-19 test. What is the probability that you actually have COVID-19 if test comes out positive? Let's start with some notation:
+
+- Let $\theta$ represent your true state: $\theta = 1$ if you are infected with the virus and $\theta = 0$ if you are not. 
+- Let $y$ denote the result of the test: $y = 1$ if the test comes back positive and $y = 0$ if the test is negative.
+- Define the probability of a correct result for an infected subject as $p = Pr(y=1|\theta=1)$. We call this the *sensitivity* of the test.
+- Define the probability of a correct result for a non-infected subject as $q = Pr(y=0|\theta=0)$. We call this the *specificity* of the test.
+- If we know the specificity, we know the *false positive probability*, $q_0 = 1 - q = q = Pr(y=1|\theta=0)$.
+- Define the prior probability of being infected as $\pi$. This is the marginal probability $Pr(\theta = 1) = \pi$ . We call this the *prevalence* of the outcome (in this case the prevalence of COVID-19).
+
+We know the following about COVID-19 and the test we took:
+
+- We know that when we took the test, 4% of the population had COVID-19.
+- The nurse who helped us with the test told us that the test had a sensitivity of .90 and specificity of .92. This means that the false positive rate is .08.
 
 We set the following values in R:
 ```{r}
-pi <- .04   # 20% of population is infected
-q1 <- .90  # test has sensitivity of .90
-q0 <- .08  # test has specificity of .92
+pi <- .04  # Prior probability of infection (ie, Prevalence)
+q1 <- .90  # Sensitivity
+q0 <- .08  # False positive
 ```
 
 
-With this we can compute the posterior probabilities, given test result. 
+With this information we can compute the posterior probabilities, given test result. 
 
-The probability of infection, before the test result is available is `pi`:
+
+Using Bayes Rule, we find that the posterior probability of infection given a positive test is:
+$$Pr(\theta = 1 |y_1 =1) = \frac{Pr(\theta = 1, y_1 = 1)}{Pr(y_1=1)} = \frac{Pr(\theta=1)Pr(y_1=1|\theta=1)}{Pr(y_1=1)} = \frac{\pi p }{\pi p + (1-\pi)q}$$
+
+In R: 
 ```{r}
-pi  # Prob of infection, before test result is available 
+
+pi * q1 / (pi*q1 + (1-pi)*q0)  # Probability of infection given a positive test result
 
 ```
 
-The probability of infection given a positive test is:
-$$Pr(\theta|y_1 =1) = \frac{Pr(\theta = 1, y_1 = 1)}{Pr(y_1=1)} = \frac{Pr(\theta=1)Pr(y_1=1|\theta=1)}{Pr(y_1=1)} = \frac{\pi p }{\pi p + (1-\pi)q}$$
+Using Bayes Rule, we can also compute the posterior probability of infection had the test come out negative:
+$$Pr(\theta = 1 |y_1 =0) = \frac{Pr(\theta = 1, y_1 = 1)}{Pr(y_1=0)} = \frac{Pr(\theta=1)Pr(y_1=0|\theta=1)}{Pr(y_1=0)} = \frac{\pi (1-p) }{\pi (1-p) + (1-\pi)(1-q)}$$
 
+In R: 
 
 ```{r}
 
-pi * q1 / (pi*q1 + (1-pi)*q0)  # Prob of infection given positive test result
-
+pi*(1-q1) / (pi*(1-q1) + (1-pi)*(1-q0))  # Probability of infection given a negative test result
 ```
 
-The probability of infection given a negative test is:
-$$Pr(\theta|y_1 =0) = \frac{Pr(\theta = 1, y_1 = 1)}{Pr(y_1=0)} = \frac{Pr(\theta=1)Pr(y_1=0|\theta=1)}{Pr(y_1=0)} = \frac{\pi (1-p) }{\pi (1-p) + (1-\pi)(1-q)}$$
+#### How does the prior influence the posterior?
+
+One thing we see from looking at the expressions for the posterior probabilities $Pr(\theta = 1 |y_1 =0)$ and $Pr(\theta =1 |y_1 =0)$ above is that they both depend on the prior probability of infection, $\pi$. We can plot how both posterior probabilities change as $\pi$ increases
+
+
+In R:
 
 ```{r}
-
-pi*(1-q1) / (pi*(1-q1) + (1-pi)*(1-q0))  # Prob of infection if test negative
-```
-
-Plot posterior probability versus prior probability:
-
-```{r}
-post.prob <- function(pi, q0, q1)
+post.prob.pos.test <- function(pi, q0, q1)
 {
   pi * q1 / (pi*q1 + (1-pi)*q0)
 }
 
+
+post.prob.neg.test <- function(pi, q0, q1)
+{
+  pi*(1-q1) / (pi*(1-q1) + (1-pi)*(1-q0))
+}
+
+
 grid <- seq(.01, .99, .01)
 
-plot(grid, post.prob(pi=grid, q0=q0, q1=q1), type="l", 
-     xlab="Prior probability", ylab="Posterior prob", 
-     main="Prob of infection given positive test", ylim=c(0,1))
+
+par(mfrow=c(1,2)) 
+
+plot(grid, post.prob.pos.test(pi=grid, q0=q0, q1=q1), type="l", 
+     xlab="Prior probability \n (COVID-19 prevalence)", ylab="Posterior probability", 
+     main="Probabiliy of infection \n given positive test", ylim=c(0,1))
+
+plot(grid, post.prob.neg.test(pi=grid, q0=q0, q1=q1), type="l", 
+     xlab="Prior probability  \n (COVID-19 prevalence)", ylab="Posterior probability", 
+     main="Probabiliy of infection \n given negative test", ylim=c(0,1))
 ```
 
-That's how the posterior prob varies with prior prob
+#### How do the sensitivity and specificty influence the posterior?
 
-What about the sensitivity and specificity of the test?
+We first plot how the sensitivity influence the posteriors:
+
 
 ```{r}
-op <- par(mfrow=c(1,2))
+par(mfrow=c(1,2))
 
-plot(grid, post.prob(pi=pi, q1=grid, q0=q0), type="l", 
-     xlab="Sensitivity of test", ylab="Posterior prob", 
-     main="Prob of infection given positive test", ylim=c(0,1))
+plot(grid, post.prob.pos.test(pi=pi, q1=grid, q0=q0), type="l", 
+     xlab="Sensitivity of the test", ylab="Posterior probability", 
+     main="Probabiliy of infection \n given positive test", ylim=c(0,1))
 
-plot(grid, post.prob(pi=pi, q1=q1, q0=1-grid), type="l",
-     xlab="Specificity of test", ylab="Posterior prob", 
-     main="Prob of infection given positive test", ylim=c(0,1))
+plot(grid, post.prob.neg.test(pi=pi, q1=grid, q0=q0), type="l",
+     xlab="Sensitivity of the test", ylab="Posterior probability", 
+     main="Probabiliy of infection \n given negative test", ylim=c(0,1))
 
-par(op)
+
+```
+
+We now plot how the specificity influences the posteriors:
+
+
+```{r}
+par(mfrow=c(1,2))
+
+plot(grid, post.prob.pos.test(pi=pi, q1=q1, q0=1-grid), type="l", 
+     xlab="Specificity of the test", ylab="Posterior probability", 
+     main="Probabiliy of infection \n given positive test", ylim=c(0,1))
+
+plot(grid, post.prob.neg.test(pi=pi, q1=q1, q0=1-grid), type="l",
+     xlab="Specificity of the test", ylab="Posterior probability", 
+     main="Probabiliy of infection \n given negative test", ylim=c(0,1))
+
+
 ```
  
+ 
+
+### Taking Two COVID-19 Tests
+
+In the scenario above, when you only took one test, we obtained that the probability of actually being infected given a positive test is .032 (given a prior of .04, a test sensitivity of .90, and a test specificity of .92). The natural thing to do is to get tested again and ensure that this is not a false positive. 
+
+Assuming the following:
+
+- Our health status has not changed between tests
+- The two tests are independent.
+
+What is the probability that we are infected given that we have obtained two positive test results?
+
+
+
 ### Monte Carlo approximation 
 Simulate the joint distribution of theta and Y:
 ```{r}
