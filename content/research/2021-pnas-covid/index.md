@@ -14,6 +14,8 @@ summary:
 
 
 btn:
+- url : "/research/2021-pnas-covid/2021-pnas-covid-article.pdf" 
+  name: preprint
 - url : "/research/2021-pnas-covid/2021-pnas-covid-appendix.pdf" 
   name: appendix
   
