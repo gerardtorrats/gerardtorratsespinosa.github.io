@@ -55,10 +55,10 @@ My research has been featured in [*The New York Times*](https://www.nytimes.com/
 &nbsp;
 #### News and Updates
 
-&bull; 12/2020: My paper on racial segregation and COVID-19 has been accepted at *Proceedings of the National Academy of Sciences*.     
-&bull; 07/2020: I started as an [Assistant Professor in Sociology at Columbia University](https://sociology.columbia.edu/content/gerard-torrats-espinosa).  
-&bull; 01/2020: My article "[Crime and Inequality in Academic Achievement Across School Districts in the United States](https://www.google.com)" has been published in *Demography*.  
-&bull; 07/2019: I started as a postdoctoral researcher at [Columbia University's Data Science Institute](https://www.datascience.columbia.edu/people/gerard-torrats-espinosa/). 
+&bull; 12-2020: My paper on racial segregation and COVID-19 has been accepted at *Proceedings of the National Academy of Sciences*.     
+&bull; 07-2020: I started as an [Assistant Professor in Sociology at Columbia University](https://sociology.columbia.edu/content/gerard-torrats-espinosa).  
+&bull; 01-2020: My article "[Crime and Inequality in Academic Achievement Across School Districts in the United States](https://www.google.com)" has been published in *Demography*.  
+&bull; 07-2019: I started as a postdoctoral researcher at [Columbia University's Data Science Institute](https://www.datascience.columbia.edu/people/gerard-torrats-espinosa/). 
 
 
 
