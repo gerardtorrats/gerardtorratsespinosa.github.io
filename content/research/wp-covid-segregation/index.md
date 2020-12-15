@@ -24,11 +24,13 @@ btn:
   
 # Project  image 
 images:
-- path: "working-papers/wp-covid-segregation/wp-covid-segregation-image1.png"
+- path: "research/wp-covid-segregation/wp-covid-segregation-image1.png"
   caption: ""
-- path: "working-papers/wp-covid-segregation/wp-covid-segregation-image2.png"
+- path: "research/wp-covid-segregation/wp-covid-segregation-image2.png"
   caption: ""  
-
+- path: "research/wp-covid-segregation/wp-covid-segregation-image3.png"
+  caption: ""  
+  
 # Area
 area: 
   - Segregation
