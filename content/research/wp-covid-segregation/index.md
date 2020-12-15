@@ -14,14 +14,8 @@ summary:
 
 
 btn:
-- url : 
-  name:
-- url : "#"
-  name:
-- url : "#"
-  name: 
-- url : "#"
-  name: 
+- url : "/research/wp-covid-segregation/wp-covid-segregation-appendix.pdf" 
+  name: appendix
   
 # Project  image 
 images:
