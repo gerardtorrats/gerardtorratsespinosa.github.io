@@ -6,7 +6,7 @@ id: research
 date: "2020-12-10"
 
 linkType: external  # internal  or external
-permalinks: https://www.dropbox.com/s/kluaa8uxp5pohxu/2021-pnas-covid-article.pdf?raw=1
+permalinks: https://www.dropbox.com/s/761pnn8edxpn5ld/2021-pnas-covid-article.pdf?raw=1
 
 
 # Summary. An optional shortened abstract.
@@ -19,6 +19,8 @@ btn:
   name: preprint
 - url : "/research/2021-pnas-covid/2021-pnas-covid-appendix.pdf" 
   name: appendix
+- url : "https://doi.org/10.7910/DVN/JHFOSE" 
+  name: data
   
 # Project  image 
 images:
