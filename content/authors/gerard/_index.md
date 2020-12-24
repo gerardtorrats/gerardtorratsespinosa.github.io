@@ -57,7 +57,7 @@ My research has been featured in [*The New York Times*](https://www.nytimes.com/
 
 &bull; 12-2020: My article "[Using Machine Learning to Estimate the Effect of Racial Segregation on COVID-19 Mortality in the United States](https://www.dropbox.com/s/761pnn8edxpn5ld/2021-pnas-covid-article.pdf?raw=1)" has been accepted at the *Proceedings of the National Academy of Sciences*.     
 &bull; 07-2020: I started as an [Assistant Professor in Sociology at Columbia University](https://sociology.columbia.edu/content/gerard-torrats-espinosa).  
-&bull; 01-2020: My article "[Crime and Inequality in Academic Achievement Across School Districts in the United States](https://www.google.com)" has been published in *Demography*.  
+&bull; 01-2020: My article "[Crime and Inequality in Academic Achievement Across School Districts in the United States](https://doi.org/10.1007/s13524-019-00850-x)" has been published in *Demography*.  
 &bull; 07-2019: I started as a postdoctoral researcher at [Columbia University's Data Science Institute](https://www.datascience.columbia.edu/people/gerard-torrats-espinosa/). 
 
 
