@@ -53,6 +53,6 @@ If you are having issues downloading the PDF with the appendix, [click here]({{<
 
 ## Replication Files
 
-Coming soon. 
+All data and code are available to the public here: https://doi.org/10.7910/DVN/JHFOSE. 
 
 
