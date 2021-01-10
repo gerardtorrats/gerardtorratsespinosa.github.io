@@ -1,5 +1,5 @@
 ---
-title: "Sociological Methods (GR5052)"
+title: "Sociological Methods (Sociology GR5052)"
 subTitle: "Fall 2019"
 id: teaching
 sidebar: true

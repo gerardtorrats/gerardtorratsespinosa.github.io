@@ -1,40 +1,36 @@
 {{ define "main" }}    
 <section class="section single-page">
-    <div class="container"> 
-        <!-- <div class="row">
-            <div class=" col-9 offset-3   mb-2">
-                <h1 class="title-page">{{ .Title }}</h1>      
-                <span class="text-muted">{{.Date.Format "01, January, 2006 "}} </span>
-            </div>
-        </div> -->
+    <div class="container">         
         <div class="row">
-          
-            
-            {{if not .Params.pageType}}
-            {{if .Params.sidebar }}
-                <div class="col-3 aside black d-none d-lg-block">
-                    <div class="posfixed">
-                        {{ .TableOfContents }}
-                    </div>
+            <div class="col-3 aside black d-none d-lg-block">
+                <div class="posfixed">
+                    {{ .TableOfContents }}
                 </div>
-            {{end}}
-            {{end}}
-
-            
-            <div class="{{if .Params.sidebar}} col-9 {{else}} col-12 {{end}} mb-2">
-                {{if  .Params.pageType }}
-                    <div class="row">
-                        <!-- <h1>{{.Title }}</h1>                              
-                        <span class="text-muted">{{.Date.Format "01, January, 2006 "}} </span> -->
-                        {{ .Content  | safeHTML }}
-                    </div>
-                {{else}}
-                    <h1>{{.Title }}</h1>                      
-                    <span  class="text-muted">{{.Params.subTitle}} </span>>
-                    {{ .Content  | safeHTML }}
-                {{end}}
+                
             </div>
-        </div>  
+
+            <div class="col-lg-9 col-sm-12 mb-2">
+                <h4 class="title-page">{{ .Title }}</h4> 
+                {{if .Params.Journal}}
+                    <em><p class="text-muted">{{.Params.Journal}}</em> {{.Params.YearCoauthors}}</p> 
+                {{end}}
+                {{if  .Params.btn    }}
+                    <div class="btn-links lg">
+                        {{range .Params.btn }}  
+                            {{ if .name }}                                      
+                                <a class="btn btn-outline-primary btn-sm my-0 mr-1 " href="{{.url}}">{{.name}}</a>
+                            {{end}}
+                        {{ end }}
+                    </div>
+                {{end}}
+                <!-- {{if .Date}}     
+                    <span class="text-muted">{{.Date.Format "01, January, 2006 "}} </span>
+                {{end}} -->
+                
+
+                {{ .Content  | safeHTML }}
+            </div>
+        </div> 
     </div>
 </section>
 

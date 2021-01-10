@@ -34,6 +34,7 @@ images:
 # Area
 area: 
   - Segregation
+  - Public Health 
 
 catType: "Journal Articles"
 ---
@@ -53,6 +54,6 @@ If you are having issues downloading the PDF with the appendix, [click here]({{<
 
 ## Replication Files
 
-All data and code are available to the public here: https://doi.org/10.7910/DVN/JHFOSE. 
+Data and code are available at [Harvard Dataverse](https://doi.org/10.7910/DVN/JHFOSE).
 
 
