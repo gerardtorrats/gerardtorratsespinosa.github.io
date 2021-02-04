@@ -1,12 +1,12 @@
 ---
 title: "Using Machine Learning to Estimate the Effect of Racial Segregation on COVID-19 Mortality"
 Journal: "Proceedings of the National Academy of Sciences"
-YearCoauthors: "Forthcoming"
+YearCoauthors: "2021"
 id: research
 date: "2020-12-10"
 
 linkType: external  # internal  or external
-permalinks: https://www.dropbox.com/s/761pnn8edxpn5ld/2021-pnas-covid-article.pdf?raw=1
+permalinks: https://www.pnas.org/content/118/7/e2015577118
 
 
 # Summary. An optional shortened abstract.

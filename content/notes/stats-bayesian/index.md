@@ -19,7 +19,7 @@ catType: "Statistics"
 ---
 
 ### Example 1
-[Click here]({{< file-download url="notes/stats-bayesian/bayesian-examples.Rmd" >}}) to download the Rmarkdown file that generates the output below.
+[Click here]({{< file-download url="notes/stats-bayesian/bayesian-examples.Rmd" >}}) to download the Rmarkdown file that generates the output below, and [click here]({{< file-download url="notes/stats-bayesian/bayesian-examples.html" >}}) to download the HTML file with the content.
 
 
-{{< pdfedit  src="/notes/stats-bayesian/bayesian-examples.html"title="Open HTML" height="800" width="90%"  >}}
+{{< pdfedit  src="/notes/stats-bayesian/bayesian-examples.html"title="Open HTML" height="800" width="100%"  >}}

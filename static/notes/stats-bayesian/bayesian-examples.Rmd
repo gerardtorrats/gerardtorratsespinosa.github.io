@@ -78,6 +78,18 @@ body{ /* Normal  */
        color: Black;
       font-family: "Arial", Times, serif;
   }
+
+
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 14px;
+    color: DarkBlue;
+    border-left: 5px solid #eee;
+}
+
+
 td {  /* Table  */
   font-size: 8px;
 }
