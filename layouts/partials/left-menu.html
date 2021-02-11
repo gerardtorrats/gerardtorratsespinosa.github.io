@@ -17,7 +17,7 @@
             <ul class="list-unstyled mb-0 black">
                 {{- range $name, $items := .Site.Taxonomies.area }}
                 <li class=" mb-2">
-                    <a href="{{ "area/" | relLangURL }}{{ $name | urlize | lower }}" class="d-block text-color py-10">{{ $name | title | humanize }}</a>
+                    <a href="{{ "area/" | relLangURL }}{{ $name | urlize | lower }}" class="d-block text-color py-10" STYLE="text-transform:capitalize" >{{ $name | title | humanize }}</a>
                 </li>
                 {{- end }}
             </ul>

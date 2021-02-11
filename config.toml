@@ -101,7 +101,7 @@ pygmentsStyle = "manni"
 
   
 #[[menu.main]]
-#   name = "Blog"
+#   name = "Blog: Blog Name"
 #   url = "/blog"
 #   identifier = "blog"
 #   weight = 10

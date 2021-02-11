@@ -1,11 +1,12 @@
 {{ "<!-- blog -->" | safeHTML }}
-
             <div class="mt-0 {{if .Params.sidebar}} col-xs-12 col-sm-12 col-md-9 {{else}}  col-12 {{end}}">
-                
+                                   <h2 style = "text-align: center;  background-color: #FFFFFF; height:45px; padding-top:0px" > Blog Title Here</h2>
+<p style = "text-align: center" class="text-muted"> <em>Write subtitle here</em></p>     
+
                     {{ "<!-- blog-item -->" | safeHTML }}
                     <ul class="catlist post-list">                    
                         {{ range .Data.Pages }}                            
-                            <li>                                
+                            <li>     
                                 <div class="pt-0 pb-3">
                                     <a href="{{ .Permalink }}" ><strong>{{ .Title }}</strong></a>
                                     <div class="row">

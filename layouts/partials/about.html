@@ -29,8 +29,8 @@
                     <div class="portrait-title text-center">
                       <!-- <h2 itemprop="name">{{ $person.name }}</h2> -->
                       {{ with $person.role }}<h3 itemprop="jobTitle" class="mt-2">{{ . | safeHTML | emojify }}</h3>{{ end }} <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
-                      <h3><a href="{{ $person.link1}}">{{ with $person.link1text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3> <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
-                      <h3><a href="{{ $person.link2}}">{{ with $person.link2text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
+                      <h3><a href="{{ $person.link1}}" target="_blank">{{ with $person.link1text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3> <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
+                      <h3><a href="{{ $person.link2}}" target="_blank">{{ with $person.link2text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
                       {{ with $person.addtext }}<h3 itemprop="jobTitle" class="mt-2">{{ . | safeHTML | emojify }}</h3>{{ end }}  <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
                     
                       {{if  $person.courses}}
@@ -49,7 +49,7 @@
                      
                     </div>
               
-                    <link itemprop="url" href="{{ .Permalink }}">
+                    <link itemprop="url" href="{{ .Permalink }}" target="_blank">
               
                     <ul class="network-icon" aria-hidden="true">
                       {{ range $person.social }}
@@ -70,7 +70,7 @@
                       
                       <li>
                         
-                        <a itemprop="sameAs" href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }}>
+                        <a itemprop="sameAs" href="{{ $link | safeURL }}" target="_blank" {{ $target | safeHTMLAttr }}>
                           {{if $img}} 
                             <img src="{{$img}}" alt="{{.icon}}">
                           {{else}}
@@ -85,8 +85,8 @@
                       {{ end }}
                        <div class="portrait-title text-center">
                           <h3><a>  </a></h3> 
-                      <h3><a href="{{ $person.link3}}">{{ with $person.link3text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
-                      <h3><a href="{{ $person.link4}}">{{ with $person.link4text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
+                      <h3><a href="{{ $person.link3}}" target="_blank">{{ with $person.link3text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
+                      <h3><a href="{{ $person.link4}}" target="_blank">{{ with $person.link4text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
                           {{ with $person.addtext2 }}<h3 itemprop="jobTitle" class="mt-2">{{ . | safeHTML | emojify }}</h3>{{ end }}   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
                       </div>
                       
