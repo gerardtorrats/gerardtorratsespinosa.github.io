@@ -1,1 +1,1 @@
-This repository contains the files for my personal website: https://gerardtorratsespinosa.com/  
+This repository contains the files for my personal website built with Hug: https://gerardtorratsespinosa.com/
