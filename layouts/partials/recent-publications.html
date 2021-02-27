@@ -16,7 +16,7 @@
                                 <div class="col-12 col-lg-8">                                
                                     {{ with .Summary }}
                                         <div class="article-style mt-3" itemprop="articleBody">
-                                            {{ . | markdownify | truncate 750 }}
+                                            {{ . | safeHTML | truncate 500 }}
                                         </div>
                                     {{ end }}                                
                                 </div>
