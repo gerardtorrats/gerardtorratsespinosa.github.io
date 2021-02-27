@@ -53,7 +53,7 @@ I am an Assistant Professor in Sociology at [Columbia University](https://sociol
 &nbsp;
 #### News and Updates
 
-&bull; 02-2021: My article "[Using Machine Learning to Estimate the Effect of Racial Segregation on COVID-19 Mortality in the United States](https://www.pnas.org/content/118/7/e2015577118)" has been published at the *Proceedings of the National Academy of Sciences*.     
+&bull; 01-2021: My article "[Using Machine Learning to Estimate the Effect of Racial Segregation on COVID-19 Mortality in the United States](https://www.pnas.org/content/118/7/e2015577118)" has been published at the *Proceedings of the National Academy of Sciences*.     
 &bull; 07-2020: I started as an [Assistant Professor in Sociology at Columbia University](https://sociology.columbia.edu/content/gerard-torrats-espinosa).  
 &bull; 01-2020: My article "[Crime and Inequality in Academic Achievement Across School Districts in the United States](https://doi.org/10.1007/s13524-019-00850-x)" has been published in *Demography*.  
 &bull; 07-2019: I started as a postdoctoral researcher at [Columbia University&rsquo;s Data Science Institute](https://www.datascience.columbia.edu/people/gerard-torrats-espinosa/). 
