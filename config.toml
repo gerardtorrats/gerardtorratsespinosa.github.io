@@ -126,10 +126,9 @@ pygmentsStyle = "manni"
   MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
   MathJaxVersion = "2.7.5"
 
-
-
 [params.font]
   name = "Source+Sans+Pro"
-  sizes = ["200", "300", "400", "600", "700", "900" ]
+  sizes = ["250", "350", "400", "600", "700", "900" ] 
+  # sizes = ["200", "300", "400", "600", "700", "900" ] # Thos was the original
 
   
