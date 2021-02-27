@@ -31,6 +31,7 @@
                       {{ with $person.role }}<h3 itemprop="jobTitle" class="mt-2">{{ . | safeHTML | emojify }}</h3>{{ end }} <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
                       <h3><a href="{{ $person.link1}}" target="_blank">{{ with $person.link1text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3> <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
                       <h3><a href="{{ $person.link2}}" target="_blank">{{ with $person.link2text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
+                      <h3><a href="{{ $person.link3}}" target="_blank">{{ with $person.link3text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->                         
                       {{ with $person.addtext }}<h3 itemprop="jobTitle" class="mt-2">{{ . | safeHTML | emojify }}</h3>{{ end }}  <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
                     
                       {{if  $person.courses}}
@@ -85,8 +86,9 @@
                       {{ end }}
                        <div class="portrait-title text-center">
                           <h3><a>  </a></h3> 
-                      <h3><a href="{{ $person.link3}}" target="_blank">{{ with $person.link3text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
                       <h3><a href="{{ $person.link4}}" target="_blank">{{ with $person.link4text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
+                      <h3><a href="{{ $person.link5}}" target="_blank">{{ with $person.link5text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->   
+                      <h3><a href="{{ $person.link6}}" target="_blank">{{ with $person.link6text }} {{ . | safeHTML | emojify }} {{ end }}</a></h3>   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->                       
                           {{ with $person.addtext2 }}<h3 itemprop="jobTitle" class="mt-2">{{ . | safeHTML | emojify }}</h3>{{ end }}   <!-- To make this text look like paragraphs style, change <h3></h3> to <p></p> -->    
                       </div>
                       

@@ -7,12 +7,16 @@ link1: "/cv/cv-torrats-espinosa.pdf"
 link1text: "Download my CV"
 link2: "https://calendly.com/gerardtorrats/office-hours/"
 link2text: "Office Hours Sign Up"
+link3: "mailto:gerard.torrats@columbia.edu"
+link3text: "gerard.torrats@columbia.edu"
 addtext: ""
 addtext2: ""
-link3: ""
-link3text: ""
 link4: ""
 link4text: ""
+link5: ""
+link5text: ""
+link6: ""
+link6text: ""
 courses:
 - course: 
   institution: 
@@ -24,18 +28,18 @@ courses:
   institution: 
   year:
 social:
-- icon: email
+- icon: github
   icon_pack: fa
-  image: /images/email-at.png 
-  link: mailto:gerard.torrats@columbia.edu
-- icon: twitter
-  icon_pack: fa
-  image: /images/twitter_logo.png 
-  link: https://twitter.com/GerardTorrats
+  image: /images/github-logo-filled.png 
+  link: https://github.com/gerardtorrats
 - icon: scholar
   icon_pack: fa
   image: /images/google-scholar.png 
   link: https://scholar.google.com/citations?user=GWZTWLUAAAAJ&hl=en
+- icon: twitter
+  icon_pack: fa
+  image: /images/twitter_logo.png 
+  link: https://twitter.com/GerardTorrats
 - icon: linkedin
   icon_pack: fa
   image: /images/linkedin-logo-round.png

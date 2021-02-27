@@ -128,7 +128,7 @@ pygmentsStyle = "manni"
 
 [params.font]
   name = "Source+Sans+Pro"
-  sizes = ["250", "350", "400", "600", "700", "900" ] 
+  sizes = ["400"] 
   # sizes = ["200", "300", "400", "600", "700", "900" ] # Thos was the original
 
   
