@@ -52,7 +52,7 @@ I am an Assistant Professor in Sociology at [Columbia University](https://sociol
 
 &nbsp;
 #### News and Updates
-&bull; 10-2021: The study  "[The EmpaTeach Intervention for Reducing Physical Violence from Teachers to Students in Nyarugusu Refugee Camp: A Cluster-Randomised Controlled Trial](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003808)" co-authored with researchers from the Behavioral Insights Team, the International Rescue Committee, and the London School of Hygiene and Tropical Medicine  has been published in *PLoS Medicine*.     
+&bull; 10-2021: The study  "[The EmpaTeach Intervention for Reducing Physical Violence from Teachers to Students in Nyarugusu Refugee Camp: A Cluster-Randomised Controlled Trial](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003808)," co-authored with researchers from the Behavioral Insights Team, the International Rescue Committee, and the London School of Hygiene and Tropical Medicine, has been published in *PLoS Medicine*.     
 &bull; 02-2021: My article "[Using Machine Learning to Estimate the Effect of Racial Segregation on COVID-19 Mortality in the United States](https://www.pnas.org/content/118/7/e2015577118)" has been published at the *Proceedings of the National Academy of Sciences*.     
 &bull; 07-2020: I started as an [Assistant Professor in Sociology at Columbia University](https://sociology.columbia.edu/content/gerard-torrats-espinosa).  
 &bull; 01-2020: My article "[Crime and Inequality in Academic Achievement Across School Districts in the United States](https://doi.org/10.1007/s13524-019-00850-x)" has been published in *Demography*.  
