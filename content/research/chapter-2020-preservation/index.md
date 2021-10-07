@@ -18,7 +18,7 @@ btn:
 
 # Area 
 area:
-  - Segregation
+  - Neighborhoods
 
 
 catType: "Book Chapters" # An optional as per required put category 

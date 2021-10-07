@@ -16,7 +16,7 @@ summary:  This study examines the role that racial residential segregation has p
 
 btn:
 - url : "/research/2021-pnas-covid/2021-pnas-covid-article.pdf" 
-  name: preprint
+  name: pdf
 - url : "/research/2021-pnas-covid/2021-pnas-covid-appendix.pdf" 
   name: appendix
 - url : "https://doi.org/10.7910/DVN/JHFOSE" 
@@ -33,7 +33,7 @@ images:
   
 # Area
 area: 
-  - Segregation
+  - Neighborhoods
   - Public Health 
 
 catType: "Journal Articles"
