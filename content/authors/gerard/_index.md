@@ -7,8 +7,6 @@ link1: "/cv/cv-torrats-espinosa.pdf"
 link1text: "Download my CV"
 link2: "https://calendly.com/gerardtorrats/office-hours/"
 link2text: "Office Hours Sign Up"
-link3: "mailto:gerard.torrats@columbia.edu"
-link3text: "gerard.torrats@columbia.edu"
 addtext: ""
 addtext2: ""
 link4: ""
@@ -36,6 +34,10 @@ social:
   icon_pack: fa
   image: /images/google-scholar.png 
   link: https://scholar.google.com/citations?user=GWZTWLUAAAAJ&hl=en
+- icon: email
+  icon_pack: fa
+  image: /images/email-at.png 
+  link: mailto:gerard.torrats@columbia.edu  
 ---
 
 
