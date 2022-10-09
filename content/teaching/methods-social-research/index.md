@@ -1,6 +1,6 @@
 ---
 title: "Methods for Social Research (Sociology UN3010)"
-subTitle: "Spring 2021"
+subTitle: "Spring 2021, Spring 2022, Fall 2022"
 id: teaching
 sidebar: true
 date: "2020-10-01"
@@ -25,11 +25,6 @@ You will not become an expert in any one method of social inquiry; instead, you 
 
 This course is a good starting point for a larger research project, such as a senior thesis. However, I hope you will apply your newfound skills beyond sociology and across diverse situations that require you to collect or evaluate empirical evidence: as a consumer of news, when writing reports in a professional setting, when serving on a jury duty, etc.
 
-&nbsp;
-
-### Syllabus
-
-A copy of the syllabus can be found [here](https://www.dropbox.com/s/x9l84pv6cg83ids/srm-2021-syllabus.pdf?raw=1).
 
 
 

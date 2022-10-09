@@ -45,7 +45,7 @@ I am an Assistant Professor in [Sociology at Columbia University](https://sociol
 
 &nbsp;
 #### News and Updates
-&bull; 03-2022: The research that Sam Donahue and I are doing on the effects of diversity and peer influences in policing has been awarded a Trustee Grant from the Russell Sage Foundation ($130,497).     
+&bull; 03-2022: The research that Sam Donahue and I are doing on the effects of diversity and peer influences in policing has been awarded a [Trustee Grant from the Russell Sage Foundation](https://www.russellsage.org/awarded-project/organizational-diversity-peer-influences-and-networks-policing-quasi-experimental) ($130,497).     
 &bull; 12-2021: The article  "[Declining Violence and Improving Birth Outcomes in the US: Evidence from Birth Certificate Data](https://doi.org/10.1016/j.socscimed.2021.114595)," co-authored with Nicholas Mark, has been published in *Social Science and Medicine*.     
 &bull; 10-2021: The study  "[The EmpaTeach Intervention for Reducing Physical Violence from Teachers to Students in Nyarugusu Refugee Camp: A Cluster-Randomised Controlled Trial](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003808)," co-authored with researchers from the Behavioral Insights Team, the International Rescue Committee, and the London School of Hygiene and Tropical Medicine, has been published in *PLoS Medicine*.     
 &bull; 02-2021: My article "[Using Machine Learning to Estimate the Effect of Racial Segregation on COVID-19 Mortality in the United States](https://www.pnas.org/content/118/7/e2015577118)" has been published at the *Proceedings of the National Academy of Sciences*.     

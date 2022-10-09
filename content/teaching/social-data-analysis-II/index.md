@@ -1,6 +1,6 @@
 ---
 title: "Social Data Analysis II (Sociology GR6001)"
-subTitle: "Spring 2021"
+subTitle: "Spring 2021, Spring 2023"
 id: teaching
 sidebar: true
 date: "2020-10-01"
