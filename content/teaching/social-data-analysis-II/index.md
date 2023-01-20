@@ -35,16 +35,13 @@ A copy of the syllabus can be found [here](https://www.dropbox.com/s/llldc35mksa
 
 [The Potential Outcomes Framework](https://www.dropbox.com/s/vl6vg2ctnfo9xom/02-potential-outcomes.pdf?raw=1)
 
-
 [Regression Revisited](https://www.dropbox.com/s/1k7cwnqzfpa08g4/03-regression-revisited.pdf?raw=1)
-
 
 [Matching Methods](https://www.dropbox.com/s/cnlpkob9kaatgap/04-mathcing.pdf?raw=1)
 
 [Instrumental Variables I](https://www.dropbox.com/s/xwfwn54h72xtiop/05-instrumental-variables-I.pdf?raw=1)
 
 [Instrumental Variables II](https://www.dropbox.com/s/40kiy2t6gldtcct/06-instrumental-variables-II.pdf?raw=1)
-
 
 [Instrumental Variables III](https://www.dropbox.com/s/576rto33k2qsqel/07-instrumental-variables-III.pdf?raw=1)
 
