@@ -1,6 +1,6 @@
 ---
 title: "Methods for Social Research (Sociology UN3010)"
-subTitle: "Spring 2021, Spring 2022, Fall 2022"
+subTitle: "Spring 2021"
 id: teaching
 sidebar: true
 date: "2020-10-01"

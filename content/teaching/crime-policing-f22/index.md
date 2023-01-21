@@ -1,9 +1,9 @@
 ---
 title: "Crime and Policing (Sociology UN3983)"
-subTitle: "Spring 2022, Fall 2022"
+subTitle: "Fall 2022"
 id: teaching
 sidebar: true
-date: "2021-01-01"
+date: "2022-01-01"
 Plotly: true
 
 # Summary. An optional shortened abstract.
