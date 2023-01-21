@@ -1,9 +1,9 @@
 ---
 title: "Social Data Analysis II - Causal Inference (Sociology GR6001)"
-subTitle: "Spring 2021, Spring 2023"
+subTitle: "Spring 2023"
 id: teaching
 sidebar: true
-date: "2020-10-01"
+date: "2023-10-01"
 Plotly: true
 
 # Summary. An optional shortened abstract.
