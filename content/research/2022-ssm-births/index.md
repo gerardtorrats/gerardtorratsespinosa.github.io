@@ -1,7 +1,7 @@
 ---
 title: "Declining Violence and Improving Birth Outcomes in the US: Evidence from Birth Certificate Data"
 Journal: "Social Science and Medicine"
-YearCoauthors: "2021 (with Nicholas Mark)"
+YearCoauthors: "2022 (with Nicholas Mark)"
 id: research
 date: "2021-12-30"
 
@@ -15,15 +15,15 @@ summary:  The decline in crime that occurred in the last decade of the 20th cent
 
 
 btn:
-- url : "/research/2021-ssm-births/2021-ssm-births-article.pdf" 
+- url : "/research/2022-ssm-births/2022-ssm-births-article.pdf" 
   name: pdf
 
   
 # Project  image 
 images:
-- path: "research/2021-ssm-births/2021-ssm-births-image1.png"
+- path: "research/2022-ssm-births/2022-ssm-births-image1.png"
   caption: ""
-- path: "research/2021-ssm-births/2021-ssm-births-image2.png"
+- path: "research/2022-ssm-births/2022-ssm-births-image2.png"
   caption: ""  
   
 # Area
@@ -37,9 +37,9 @@ The decline in crime that occurred in the last decade of the 20th century was on
 
 
 
-If you are having issues downloading the PDF with the article, [click here]({{< file-download url="/research/2021-ssm-births/2021-ssm-births-article.pdf" >}}).
+If you are having issues downloading the PDF with the article, [click here]({{< file-download url="/research/2022-ssm-births/2022-ssm-births-article.pdf" >}}).
 
-{{< pdfedit src="/research/2021-ssm-births/2021-ssm-births-article.pdf" title="Download PDF" height="600" width="90%" >}}
+{{< pdfedit src="/research/2022-ssm-births/2022-ssm-births-article.pdf" title="Download PDF" height="600" width="90%" >}}
 
 
 
