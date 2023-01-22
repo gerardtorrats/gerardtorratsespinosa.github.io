@@ -9,7 +9,7 @@
                {{ partial "left-menu.html" . }}
             {{end}}
                 
-            <div class="{{if .Params.sidebar}} col-xs-12 col-sm-12 col-md-9 {{else}}  col-12 {{end}} row-offcanvas row-offcanvas-left">
+            <div class="{{if .Params.sidebar}} col-xs-12 col-sm-12 col-md-9 {{else}}  col-12 {{end}} ">
                 {{$listpage := where site.RegularPages "Section" $pageId}}
                 <ul class="catlist">                    
                     {{range $data}}
