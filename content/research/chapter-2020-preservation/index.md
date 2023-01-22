@@ -18,7 +18,7 @@ btn:
 
 # Area 
 area:
-  - Neighborhoods
+  - Urban Inequality
 
 
 catType: "Book Chapters" # An optional as per required put category 

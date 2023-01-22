@@ -26,7 +26,7 @@ images:
   
 # Area
 area: 
-  - Crime and Violence
+  - Crime
 
 catType: "Journal Articles"
 ---

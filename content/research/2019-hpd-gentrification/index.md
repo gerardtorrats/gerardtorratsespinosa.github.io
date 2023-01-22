@@ -23,7 +23,7 @@ images:
 
 # Area
 area: 
-  - Neighborhoods
+  - Urban Inequality
 
   
 catType: "Journal Articles"

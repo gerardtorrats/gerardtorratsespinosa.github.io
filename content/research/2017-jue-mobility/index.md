@@ -24,8 +24,8 @@ images:
 
 # Area
 area: 
-  - Crime and Violence
-  - Neighborhoods
+  - Crime
+  - Urban Inequality
   
 catType: "Journal Articles"
 ---

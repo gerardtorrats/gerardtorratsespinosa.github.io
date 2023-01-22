@@ -28,7 +28,7 @@ images:
   
 # Area
 area: 
-  - Crime and Violence
+  - Crime
   - Public Health
 
 catType: "Journal Articles"

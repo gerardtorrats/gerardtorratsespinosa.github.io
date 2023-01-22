@@ -33,7 +33,7 @@ images:
   
 # Area
 area: 
-  - Neighborhoods
+  - Urban Inequality
   - Public Health 
 
 catType: "Journal Articles"
