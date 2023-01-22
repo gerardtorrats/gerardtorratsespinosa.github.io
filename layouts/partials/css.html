@@ -5,6 +5,15 @@
 
 {{- $fontUrl      := printf "https://fonts.googleapis.com/css2?family=%s:wght@%s%s" $fontFace $fontSizes $fontDisplay }}
 
+<!-- This html snippet prevents the lateral "shifting" across pages when some pages have vertical scroll bar and others don't. It "forces" the space for the vertical scroll bar to appear, even if the page does not need it   -->
+<style>
+html {
+  overflow-y: scroll;
+}
+</style>
+
+
+
 
 <link rel="icon" type="image/png" href="{{ "images/favicon.svg" | relURL }}" />
 <!-- <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400&display=swap" rel="stylesheet">-->

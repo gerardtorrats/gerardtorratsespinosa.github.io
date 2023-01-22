@@ -1,6 +1,7 @@
 ---
 title: "Methods for Social Research (Sociology UN3010)"
-subTitle: "Spring 2021"
+term: "Spring 2021"
+place: "Columbia University"
 id: teaching
 sidebar: true
 date: "2020-10-01"

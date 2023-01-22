@@ -1,6 +1,7 @@
 ---
 title: "Methods for Social Research (Sociology UN3010)"
-subTitle: "Fall 2022"
+term: "Fall 2022"
+place: "Columbia University"
 id: teaching
 sidebar: true
 date: "2022-09-01"

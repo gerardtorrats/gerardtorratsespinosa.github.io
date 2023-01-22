@@ -9,7 +9,7 @@
                {{ partial "left-menu.html" . }}
             {{end}}
                 
-            <div class="{{if .Params.sidebar}} col-xs-12 col-sm-12 col-md-9 {{else}}  col-12 {{end}}">
+            <div class="{{if .Params.sidebar}} col-xs-12 col-sm-12 col-md-9 {{else}}  col-12 {{end}} row-offcanvas row-offcanvas-left">
                 {{$listpage := where site.RegularPages "Section" $pageId}}
                 <ul class="catlist">                    
                     {{range $data}}
@@ -20,7 +20,7 @@
                                 {{if eq .Params.catType $curType}}
                                     <li>
                                         <a href="{{ .RelPermalink }}">{{.Title}}</a>
-                                        <p class="text-muted">{{.Params.subTitle}}</p>                                        
+                                        <p class="text-muted">{{.Params.term}}</em> {{.Params.place}}</p>                                        
                                         {{if .Params.btn }}
                                         <div class="btn-links">
                                             {{range .Params.btn }}    

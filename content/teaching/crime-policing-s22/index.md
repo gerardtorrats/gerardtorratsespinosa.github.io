@@ -1,6 +1,7 @@
 ---
 title: "Crime and Policing (Sociology UN3983)"
-subTitle: "Spring 2022"
+term: "Spring 2022"
+place: "Columbia University"
 id: teaching
 sidebar: true
 date: "2022-09-01"

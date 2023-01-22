@@ -1,6 +1,7 @@
 ---
 title: "Social Data Analysis II - Causal Inference (Sociology GR6001)"
-subTitle: "Spring 2023"
+term: "Spring 2023"
+place: "Columbia University"
 id: teaching
 sidebar: true
 date: "2023-01-01"
