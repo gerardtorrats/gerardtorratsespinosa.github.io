@@ -52,3 +52,11 @@ A copy of the syllabus can be found [here](https://www.dropbox.com/s/llldc35mksa
 
 &nbsp;
 
+
+### Readings
+
+Readings for class discussion can be found [here](https://www.dropbox.com/sh/0divj10y8i9pgh2/AACa8P5OvkVVsclKpQAx63eea?dl=0).
+
+
+&nbsp;
+
