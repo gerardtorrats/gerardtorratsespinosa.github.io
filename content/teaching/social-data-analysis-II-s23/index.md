@@ -40,11 +40,7 @@ A copy of the syllabus can be found [here](https://www.dropbox.com/s/llldc35mksa
 
 [Matching Methods](https://www.dropbox.com/s/cnlpkob9kaatgap/04-mathcing.pdf?raw=1)
 
-[Instrumental Variables I](https://www.dropbox.com/s/xwfwn54h72xtiop/05-instrumental-variables-I.pdf?raw=1)
-
-[Instrumental Variables II](https://www.dropbox.com/s/40kiy2t6gldtcct/06-instrumental-variables-II.pdf?raw=1)
-
-[Instrumental Variables III](https://www.dropbox.com/s/576rto33k2qsqel/07-instrumental-variables-III.pdf?raw=1)
+[Instrumental Variables ](https://www.dropbox.com/s/acatsu8wwp7pne7/05-instrumental-variables.pdf?raw=1)
 
 [Panel Data](https://www.dropbox.com/s/pzp99rw8wo0nmjg/08-panel-data.pdf?raw=1)
 
