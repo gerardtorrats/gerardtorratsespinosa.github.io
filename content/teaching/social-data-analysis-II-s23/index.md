@@ -42,9 +42,9 @@ A copy of the syllabus can be found [here](https://www.dropbox.com/s/llldc35mksa
 
 [Instrumental Variables](https://www.dropbox.com/s/demv1tawqqs4oge/05-instrumental-variables.pdf?raw=1)
 
-[Panel Data](https://www.dropbox.com/s/pzp99rw8wo0nmjg/08-panel-data.pdf?raw=1)
+[Panel Data](https://www.dropbox.com/s/eg0w5bwh8gp8xlv/06-panel-data.pdf?raw=1)
 
-[Regression Discontinuity](https://www.dropbox.com/s/woyeyzy009u6jyg/09-regression-discontinuity.pdf?raw=1)
+[Regression Discontinuity](https://www.dropbox.com/s/0ti83w72rvyzlnu/07-rdd.pdf?raw=1)
 
 &nbsp;
 
