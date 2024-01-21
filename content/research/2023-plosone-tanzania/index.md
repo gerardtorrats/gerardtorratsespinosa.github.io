@@ -1,7 +1,7 @@
 ---
-title: "Understanding why EmpaTeach did not reduce teachers’ use of violence in Nyarugusu Refugee Camp: A quantitative process evaluation of a school-based violence prevention intervention"
+title: "Understanding Why EmpaTeach Did Not Reduce Teachers’ Use of Violence in Nyarugusu Refugee Camp: A Quantitative Process Evaluation of a School-Based Violence Prevention Intervention"
 Journal: "PLOS Global Public Health"
-YearCoauthors: "2023 (with Camilla Fabbri, Timothy Powell-Jackson, Katherine Rodrigues, Alexandra De Filippo, Michael Kaemingk, Baptiste Leurent,Elizabeth Shayo, Vivien Barongo, Karen M. Devries)"
+YearCoauthors: "2023 (with Camilla Fabbri, Timothy Powell-Jackson, Katherine Rodrigues, Alexandra De Filippo, Michael Kaemingk, Baptiste Leurent, Elizabeth Shayo, Vivien Barongo, Karen M. Devries)"
 id: research
 date: "2023-01-01"
 
