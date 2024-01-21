@@ -45,7 +45,7 @@ I am an Assistant Professor in [Sociology at Columbia University](https://sociol
 
 &nbsp;
 #### News and Updates
-&bull; 01-2024: I am grateful for the opportunity to join the Russsell Sage Visiting Scholar Class of 2024–2025.   
+&bull; 01-2024: I am grateful for the opportunity to join the [Russsell Sage Visiting Scholar](https://www.russellsage.org/about/what-we-do/visiting-scholars-program) Class of 2024–2025.   
 &bull; 06-2023: The study  "[Understanding why EmpaTeach did not reduce teachers’ use of violence in Nyarugusu Refugee Camp: A quantitative process evaluation of a school-based violence prevention intervention](https://doi.org/10.1371/journal.pgph.0001404)," co-authored with researchers from the Behavioral Insights Team, the International Rescue Committee, and the London School of Hygiene and Tropical Medicine, has been published in *PLoS Global Public Health*.     
 &bull; 03-2022: The research that Sam Donahue and I are doing on the effects of diversity and peer influences in policing has been awarded a [Trustee Grant from the Russell Sage Foundation](https://www.russellsage.org/awarded-project/organizational-diversity-peer-influences-and-networks-policing-quasi-experimental).   
 &bull; 01-2022: The article  "[Declining Violence and Improving Birth Outcomes in the US: Evidence from Birth Certificate Data](https://doi.org/10.1016/j.socscimed.2021.114595)," co-authored with Nicholas Mark, has been published in *Social Science and Medicine*.     
