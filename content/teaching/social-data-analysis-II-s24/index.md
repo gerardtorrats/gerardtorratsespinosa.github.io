@@ -25,7 +25,7 @@ This course is the second course in the PhD-level sequence on quantitative metho
 
 ### Syllabus
 
-A copy of the syllabus can be found [here](https://www.dropbox.com/scl/fi/rxb1itw0971h2os1h71p0/sda2-2024-syllabus.pdf?raw=1).
+A copy of the syllabus can be found [here](https://www.dropbox.com/scl/fi/rxb1itw0971h2os1h71p0/sda2-2024-syllabus.pdf?rlkey=jhknet90ppozdye2qootvh3r2&raw=1).
 
 
 &nbsp;
