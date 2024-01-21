@@ -4,7 +4,7 @@ term: "Spring 2024"
 place: "Columbia University"
 id: teaching
 sidebar: true
-date: "2024-02-01"
+date: "2024-01-02"
 Plotly: true
 
 # Summary. An optional shortened abstract.
