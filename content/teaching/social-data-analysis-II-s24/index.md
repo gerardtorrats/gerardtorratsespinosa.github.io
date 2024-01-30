@@ -32,7 +32,7 @@ A copy of the syllabus can be found [here](https://www.dropbox.com/scl/fi/rxb1it
 
 ### Lecture Notes
 
-[Introduction to Causal Thinking](https://www.dropbox.com/scl/fi/ygatu5rs0t4gacby6trp6/01-causal-thinking.pdf?rlkey=p1pvx79gso2ibgjo5zcvk6c2l&dl=0)
+[Introduction to Causal Thinking](https://www.dropbox.com/scl/fi/1c2n8pb6fyyntpuz18l71/01-causal-thinking.pdf?rlkey=btk8cg3dazohbcgznqewjzfbv&raw=1)
 
 [The Potential Outcomes Framework](https://www.dropbox.com/scl/fi/drgk5jeaszii397a1flzq/02-potential-outcomes.pdf?rlkey=4tcir823bs69bm8f20assobcm&raw=1)
 
