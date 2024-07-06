@@ -45,6 +45,11 @@ I am an Assistant Professor in [Sociology at Columbia University](https://sociol
 
 &nbsp;
 #### News and Updates
+
+&bull; 07-2024: I wrote a chapter for the book *Between Us: Healing Ourselves and Changing the World Through Sociology* (edited by Marika Lindholm and Elizabeth Anne Wood and published by Chicago University Press) revisiting my time as a firefighter in Barcelona through the lens of sociological concepts.
+&bull; 07-2024: The article  "[Exposure to Crime and Racial Birth Outcome Disparities](https://doi.org/10.1007/s11524-024-00864-w)," co-authored with Nicholas Mark, has been published in the *Journal of Urban Health*.  
+&bull; 07-2024: The article  "[Exposure to Crime and Racial Birth Outcome Disparities](https://doi.org/10.1007/s11524-024-00864-w)," co-authored with Nicholas Mark, has been published in the *Journal of Urban Health*.  
+&bull; 06-2024: The article  "[Neighborhood Safety and Neighborhood Police Violence Are Associated with Psychological Distress among English‐ and Spanish‐Speaking Transgender Women of Color in New York City: Finding from the TURNNT Cohort Study](https://doi.org/10.1007/s11524-024-00879-3)," co-authored with Dustin Duncan and others, has been published in the *Journal of Urban Health*.  
 &bull; 01-2024: I am grateful for the opportunity to join the [Russsell Sage Visiting Scholar](https://www.russellsage.org/about/what-we-do/visiting-scholars-program) Class of 2024–2025.   
 &bull; 06-2023: The study  "[Understanding Why EmpaTeach Did Not Reduce Teachers’ Use of Violence in Nyarugusu Refugee Camp: A Quantitative Process Evaluation of a School-Based Violence Prevention Intervention](https://doi.org/10.1371/journal.pgph.0001404)," co-authored with researchers from the Behavioral Insights Team, the International Rescue Committee, and the London School of Hygiene and Tropical Medicine, has been published in *PLoS Global Public Health*.     
 &bull; 03-2022: The research that Sam Donahue and I are doing on the effects of diversity and peer influences in policing has been awarded a [Trustee Grant from the Russell Sage Foundation](https://www.russellsage.org/awarded-project/organizational-diversity-peer-influences-and-networks-policing-quasi-experimental).   
