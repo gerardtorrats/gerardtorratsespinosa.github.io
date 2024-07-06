@@ -1,5 +1,6 @@
 ---
 title: "Exposure to Crime and Racial Birth Outcome Disparities"
+Journal: "Journal of Urban Health"
 YearCoauthors: "2024 (with Nicholas Mark)"
 id: research
 date: "2024-01-02"
