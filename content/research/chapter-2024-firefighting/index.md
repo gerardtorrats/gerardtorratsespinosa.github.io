@@ -2,7 +2,7 @@
 title: "Firefighting in Barcelona"
 Journal: "Between Us: Healing Ourselves and Changing the World Through Sociology"  
 id: research
-date: "2024-01-01" # Subtract 10 years to the date so that they don't show up in recent publications
+date: "2010-02-02" # Subtract at least 10 years to the date so that they don't show up in recent publications
 YearCoauthors: "2024"
 
 linkType: external  # internal  or external
