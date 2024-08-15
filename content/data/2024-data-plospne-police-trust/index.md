@@ -6,11 +6,11 @@ id: research
 date: "2024-01-01"
 
 linkType: external  # internal  or external
-permalinks: https://doi.org/10.7910/DVN/KZJQ5X
+permalinks: https://doi.org/10.7910/DVN/CO404V
 
 
 catType: "Replication Data"
 ---
 
-Data and code are available at [Harvard Dataverse](https://doi.org/10.7910/DVN/KZJQ5X).
+Data and code are available at [Harvard Dataverse](https://doi.org/10.7910/DVN/CO404V).
 
