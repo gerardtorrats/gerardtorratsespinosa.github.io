@@ -46,6 +46,7 @@ I am an Assistant Professor in [Sociology at Columbia University](https://sociol
 &nbsp;
 #### News and Updates
 
+&bull; 08-2024: Kara Rudolph and I have been awarded a grant from Centers for Disease Control and Prevention to study the community-level impact of policing on injuries and adverse childhood experiences.
 &bull; 07-2024: I wrote a chapter for the book *Between Us: Healing Ourselves and Changing the World Through Sociology* (edited by Marika Lindholm and Elizabeth Anne Wood and published by Chicago University Press) revisiting my time as a firefighter in Barcelona through the lens of sociological concepts.  
 &bull; 07-2024: The article  "[Exposure to Crime and Racial Birth Outcome Disparities](https://doi.org/10.1007/s11524-024-00864-w)," co-authored with Nicholas Mark, has been published in the *Journal of Urban Health*.  
 &bull; 06-2024: The article  "[Neighborhood Safety and Neighborhood Police Violence Are Associated with Psychological Distress among English‐ and Spanish‐Speaking Transgender Women of Color in New York City: Finding from the TURNNT Cohort Study](https://doi.org/10.1007/s11524-024-00879-3)," co-authored with Dustin Duncan and others, has been published in the *Journal of Urban Health*.  
