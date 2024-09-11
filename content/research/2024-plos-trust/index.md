@@ -18,9 +18,9 @@ summary:  Recent high-profile incidents involving the shooting or killing of una
 btn:
 - url : "/research/2024-plos-trust/2024-plos-trust-article.pdf" 
   name: pdf
-  - url : "/research/2024-plos-trust/2024-plos-trust-appendix.pdf" 
+- url : "/research/2024-plos-trust/2024-plos-trust-appendix.pdf" 
   name: appendix
- - url : "https://doi.org/10.7910/DVN/CO404V" 
+- url : "https://doi.org/10.7910/DVN/CO404V" 
   name: data 
 
   
