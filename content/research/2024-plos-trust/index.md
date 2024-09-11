@@ -35,7 +35,6 @@ images:
 # Area
 area: 
   - Policing
-  - Public Health
 
 catType: "Journal Articles"
 ---
