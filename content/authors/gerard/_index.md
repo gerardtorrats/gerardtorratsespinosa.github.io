@@ -46,6 +46,7 @@ I am an Assistant Professor in [Sociology at Columbia University](https://sociol
 &nbsp;
 #### News and Updates
 
+*Sep 2024:* The article  "[Police violence reduces trust in the police among Black residents](https://doi.org/10.1371/journal.pone.0308487)," co-authored with Jonathan Ben-Menachem, has been published in *PLoS ONE*.  
 *Aug 2024:* Kara Rudolph and I have been awarded a grant from the [Centers for Disease Control and Prevention](https://www.cdc.gov/injury-icrc/php/centers/index.html) to study the relationship between community-level exposure to aggressive policing and adverse childhood experiences.  
  <br>
 *Jul 2024:*  I wrote a chapter for the book *Between Us: Healing Ourselves and Changing the World Through Sociology* (edited by Marika Lindholm and Elizabeth Anne Wood and published by Chicago University Press) revisiting my time as a firefighter in Barcelona through the lens of sociological concepts.  
