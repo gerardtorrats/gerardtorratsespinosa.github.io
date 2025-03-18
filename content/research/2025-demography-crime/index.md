@@ -44,7 +44,7 @@ Over the past few decades, U.S. cities have changed dramatically, largely becaus
 
 If you are having issues downloading the PDF with the article, [click here]({{< file-download url="/research/{{< param folder >}}/{{< param folder >}}-article.pdf" >}}).
 
-{{< pdfedit src="/research/{{< param folder >}}{{< param folder >}}-article.pdf" title="Download PDF" height="600" width="90%" >}}
+{{< pdfedit src="/research/{{< param folder >}}/{{< param folder >}}-article.pdf" title="Download PDF" height="600" width="90%" >}}
 
 
 
