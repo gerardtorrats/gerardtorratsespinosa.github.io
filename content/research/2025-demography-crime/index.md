@@ -27,9 +27,7 @@ images:
   caption: ""
 - path: "research/2025-demography-crime/2025-demography-crime-image2.png"
   caption: ""  
-- path: "research/2025-demography-crime/2025-demography-crime-image3.png"
-  caption: ""  
-  
+
 # Area
 area: 
   - Crime
