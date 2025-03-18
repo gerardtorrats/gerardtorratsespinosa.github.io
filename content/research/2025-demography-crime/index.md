@@ -13,6 +13,7 @@ permalinks: https://doi.org/10.1215/00703370-11841397
 summary:  Over the past few decades, U.S. cities have changed dramatically, largely because of two major trends: the fall of violence and the rise of urban inequality. Despite the attention given to each of these trends, little research has assessed how they are related to each other. This study is the first to generate causal evidence on the impact of violent crime on economic residential segregation. We document the effect of the crime drop on economic segregation in 500 U.S. cities between 1990 and 2010, using exogenous shocks to city crime rates to identify causal effects. We find that declining violent and property crime reduced low-income household segregation but had no effect on affluent households. Our findings indicate that the crime decline has not overturned the trend toward rising economic segregation but has slowed its pace. 
 
 
+
 btn:
 - url : "/research/2025-demography-crime/2025-demography-crime-article.pdf" 
   name: pdf
