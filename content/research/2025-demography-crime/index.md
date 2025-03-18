@@ -1,5 +1,5 @@
 ---
-title: "The fall of violence and the reconfiguration of urban neighborhoods"
+title: "The Fall of Violence and the Reconfiguration of Urban Neighborhoods"
 Journal: "Demography"
 YearCoauthors: "2025 (with Patrick Sharkey)"
 id: research
@@ -16,8 +16,6 @@ permalinks: https://doi.org/10.1215/00703370-11841397
 
 
 btn:
-- url : "/research/2025-demography-crime/2025-demography-crime-article.pdf" 
-  name: pdf
 - url : "/research/2025-demography-crime/2025-demography-crime-appendix.pdf" 
   name: appendix
 

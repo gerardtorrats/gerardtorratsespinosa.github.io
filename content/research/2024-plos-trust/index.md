@@ -1,5 +1,5 @@
 ---
-title: "Police violence reduces trust in the police among Black residents"
+title: "Police Violence Reduces Trust in the Police among Black Residents"
 Journal: "PLoS ONE"
 YearCoauthors: "2024 (with Jonathan Ben-Menachem)"
 id: research
