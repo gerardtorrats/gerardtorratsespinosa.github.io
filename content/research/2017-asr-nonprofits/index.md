@@ -3,6 +3,7 @@ title: "Community and the Crime Decline: The Causal Effect of Local Nonprofits o
 Journal: "American Sociological Review"
 id: research
 date: "2017-02-01"
+SelectedPub: true  # This controls whether is is shown in the Selected Publications section of the home page
 YearCoauthors: 2017 (with Patrick Sharkey and Delaram Takyar)
 
 linkType: external  # internal  or external

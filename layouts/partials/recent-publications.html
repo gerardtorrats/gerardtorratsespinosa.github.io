@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12">
                 <h4>Selected Publications</h4> <!-- Change to h3 to make font size of header larger -->
-                    {{ range $index, $elem := sort (where site.RegularPages "Params.selectedpub" true) "Date" "desc" }}
+                   {{ range $index, $elem := sort (where site.RegularPages "Params.selectedpub" true) "Date" "desc" }}
                         <div class="publication-list">
                             <div class="row">
                                 <div class="col-12 col-lg-8">
