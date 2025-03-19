@@ -1,0 +1,16 @@
+<section class="section pt-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4>News & Updates</h4>
+                {{ with .Site.GetPage "news-updates" }}
+                    <div class="news-container" style="max-height: 400px; overflow-y: auto; border: 1px solid #ddd; padding: 10px;">
+                        {{ .Content }}
+                    </div>
+                {{ else }}
+                    <p>No news updates available.</p>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
