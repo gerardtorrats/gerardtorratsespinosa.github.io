@@ -2,8 +2,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h4>Recent Publications</h4> <!-- Change to h3 to make font size of header larger -->
-                    {{ range $index, $elem := where site.RegularPages "Section" "research" | first 9 }}
+                <h4>Selected Publications</h4> <!-- Change to h3 to make font size of header larger -->
+                   {{ range $index, $elem := where site.RegularPages "Section" "research" }}
+ 			 {{ if $elem.Params.selectedpub }}  <!-- Filters only selected publications -->
                         <div class="publication-list">
                             <div class="row">
                                 <div class="col-12 col-lg-8">
