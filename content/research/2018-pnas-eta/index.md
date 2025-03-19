@@ -3,6 +3,7 @@ title: "Using a Natural Experiment to Estimate the Electoral Consequences of Ter
 Journal: "Proceedings of the National Academy of Sciences"
 id: research
 date: "2018-03-01"
+SelectedPub: true  # This controls whether is is shown in the Selected Publications section of the home page
 YearCoauthors: 2018 (with Laia Balcells)
 
 linkType: external  # internal  or external

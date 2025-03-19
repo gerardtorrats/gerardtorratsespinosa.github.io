@@ -4,6 +4,7 @@ Journal: "Social Science and Medicine"
 YearCoauthors: "2022 (with Nicholas Mark)"
 id: research
 date: "2021-12-30"
+SelectedPub: true  # This controls whether is is shown in the Selected Publications section of the home page
 
 linkType: external  # internal  or external
 permalinks: https://doi.org/10.1016/j.socscimed.2021.114595

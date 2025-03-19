@@ -3,6 +3,7 @@ title: "Crime and Inequality in Academic Achievement Across School Districts in 
 Journal: "Demography"  
 id: research
 date: "2020-02-01"
+SelectedPub: true  # This controls whether is is shown in the Selected Publications section of the home page
 YearCoauthors: "2020"
 
 linkType: external  # internal  or external

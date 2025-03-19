@@ -3,6 +3,7 @@ title: "The Effect of Violent Crime on Economic Mobility"
 Journal: "Journal of Urban Economics"
 id: research
 date: "2017-01-01"
+SelectedPub: true  # This controls whether is is shown in the Selected Publications section of the home page
 YearCoauthors:  2017 (with Patrick Sharkey)
 
 linkType: external  # internal  or external
