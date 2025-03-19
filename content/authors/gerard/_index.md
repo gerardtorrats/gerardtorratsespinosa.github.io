@@ -46,6 +46,9 @@ I am an Assistant Professor in [Sociology at Columbia University](https://sociol
 &nbsp;
 #### News and Updates
 
+<div style="max-height: 400px; overflow-y: auto; border: 1px solid #ddd; padding: 10px;">
+
+
 *Mar 2025:* The article  "Severe Tornadoes and Infant Birth Weight in the United States," co-authored with Nicholas Mark and Ethan Raker, has been accepted at the *Demography*.  
 *Jan 2025:* The article  "[From the Block to the Beat: How Violence in Officers’ Neighborhoods Influences Racially Biased Policing](https://doi.org/10.1086/734296)," co-authored with Samuel Donahue, has been accepted at the *American Journal of Sociology*.  
 *Jan 2025:* The article  "[The Fall of Violence and the Reconfiguration of Urban Neighborhoods](https://doi.org/10.1215/00703370-11841397)," co-authored with Patrick Sharkey, has been accepted at *Demography*.  
@@ -64,6 +67,6 @@ I am an Assistant Professor in [Sociology at Columbia University](https://sociol
 *Jan 2020:* My article "[Crime and Inequality in Academic Achievement Across School Districts in the United States](https://doi.org/10.1007/s13524-019-00850-x)" has been published in *Demography*.  
 *Jul 2019:* I started as a postdoctoral researcher at [Columbia University&rsquo;s Data Science Institute](https://www.datascience.columbia.edu/people/gerard-torrats-espinosa/). 
 
-
+</div>
 
  
