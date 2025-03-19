@@ -1,38 +1,14 @@
-<section class="section">
+<section class="section pt-1">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h4>  News and Updates  </h4> 
-
-                {{ range $index, $elem := where site.RegularPages "Section" "newsupdate" | first 3 }}
-                    <div class="publication-list">
-                        <div class="row">
-                            <div class="col-12">
-                                <h3 class="article-title" itemprop="name">
-                                    <a href="{{ .RelPermalink }}" itemprop="url">{{ .Title }} </a>
-                                    {{ if .Params.subTitle }} <span class="text-muted">{{ .Params.subTitle }}</span> {{end}}
-                                </h3>
-                                {{if .Params.btn }}
-                                <div class="btn-links">
-                                    {{range .Params.btn }}                                        
-                                        <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="{{.url}}">{{.name}}</a>
-                                    {{ end }}
-                                </div>
-                                {{end}}
-                            </div>                           
-                        </div>
-                        <div class="row">                            
-                            <div class="col-12">                                
-                                {{ with .Summary }}
-                                    <div class="article-style mt-3" itemprop="articleBody">
-                                        {{ . | truncate 300 }}
-                                    </div>
-                                {{ end }}
-                                
-                            </div>
-                        </div>
+                <h4>News & Updates</h4>
+                {{ with .Site.GetPage "news-updates" }}
+                    <div class="news-container" style="max-height: 400px; overflow-y: auto; border: 1px solid #ddd; padding: 10px;">
+                        {{ .Content }}
                     </div>
-                   
+                {{ else }}
+                    <p>No news updates available.</p>
                 {{ end }}
             </div>
         </div>
