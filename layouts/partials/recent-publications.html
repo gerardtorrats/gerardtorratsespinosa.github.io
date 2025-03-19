@@ -2,46 +2,48 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h4>Selected Publications</h4> <!-- Changed title for clarity -->
-                
-                {{ range $index, $elem := sort (where site.RegularPages "Section" "research" "Params.SelectedPub" true) "date" "desc" }}
-                    <div class="publication-list">
-                        <div class="row">
-                            <div class="col-12 col-lg-8">
-                                <a href="{{ .Params.permalinks }}" target="_blank" itemprop="url">{{ .Title }} </a>
-                                <p class="text-muted mb-0"><em>{{ .Params.Journal }}</em>, {{ .Params.YearCoauthors }}</p>
-                                {{ partial "smbtn.html" . }}
-                            </div>                           
-                        </div>
-
-                        <div class="row">                            
-                            <div class="col-12 col-lg-8">                                
-                                {{ with .Summary }}
-                                    <div class="article-style mt-3" itemprop="articleBody">
-                                        {{ . | safeHTML | truncate 500 }} 
-                                    </div>
-                                {{ end }}                                
+                <h4>Selected Publications</h4> <!-- Change to h3 to make font size of header larger -->
+                    {{ range $index, $elem := sort (where site.RegularPages "Section" "research" "Params.SelectedPub" true) "Date" "desc" }}
+                        <div class="publication-list">
+                            <div class="row">
+                                <div class="col-12 col-lg-8">
+                                    <a href="{{ .Params.permalinks }}" target="_blank" itemprop="url">{{ .Title }} </a>
+                                    <p class="text-muted mb-0"><em>{{ .Params.Journal }}</em>, {{ .Params.YearCoauthors }}</p>
+                                    {{ partial "smbtn.html" . }}
+                                </div>                           
                             </div>
-                        
-                            <div class="col-12 col-lg-4">
-                                <div id="carouselExample{{$index}}" class="carousel slide" data-ride="carousel" data-interval="9000">
-                                    <ol class="carousel-indicators">
-                                        {{ range $indexl, $elem := .Params.images }}
-                                            <li data-target="#carouselExample{{$index}}" data-slide-to="{{$indexl}}" class="{{if eq $indexl  0 }} active {{end}}"></li>
-                                        {{ end }}
-                                    </ol>
-                                    <div class="carousel-inner">
-                                        {{ range $indexl, $elem := .Params.images }}
-                                            <div class="carousel-item {{if eq $indexl  0 }} active {{end}}">
-                                                <img class="d-block w-100" src="{{ .path }}" alt="{{ .caption }}">
-                                            </div>
-                                        {{ end }}
+                            <div class="row">                            
+                                <div class="col-12 col-lg-8">                                
+                                    {{ with .Summary }}
+                                        <div class="article-style mt-3" itemprop="articleBody">
+                                            {{ . | safeHTML | truncate 500 }} 
+                                            
+                                        </div>
+                                        
+                                        
+                                    {{ end }}                                
+                                </div>
+                            
+                                <div class="col-12 col-lg-4">
+                                    <div id="carouselExample{{$index}}" class="carousel slide" data-ride="carousel" data-interval="9000">
+                                        <ol class="carousel-indicators">
+                                            {{range $indexl, $elem := .Params.images }}
+                                                <li data-target="#carouselExample{{$index}}" data-slide-to="{{$indexl}}" class="{{if eq $indexl  0 }} active {{end}}"></li>
+                                            {{end}}
+                                        </ol>
+                                        <div class="carousel-inner">
+                                            {{range $indexl, $elem := .Params.images }}
+                                                <div class="carousel-item {{if eq $indexl  0 }} active {{end}}">
+                                                    <img class="d-block w-100" src="{{.path }}" alt="{{.caption}}">
+                                                </div>
+                                            {{end}}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                {{ end }}
+                   
+                    {{ end }}
             </div>
         </div>
     </div>
