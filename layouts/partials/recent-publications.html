@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12">
                 <h4>Selected Publications</h4> <!-- Change to h3 to make font size of header larger -->
-                   {{ range $index, $elem := sort (where site.RegularPages "Params.selectedpub" true) "Date" "desc" }} <!-- This selects publications for which SelectedPub is true and sortes them by date. Change as follows if I want to show the 9 most recent publications:   {{ range $index, $elem := where site.RegularPages "Section" "research" | first 9 }}   -->
+                   {{ range $index, $elem := sort (where site.RegularPages "Params.selectedpub" true) "Date" "desc" }} <!-- This selects publications for which SelectedPub is true and sorts them by date. -->
                         <div class="publication-list">
                             <div class="row">
                                 <div class="col-12 col-lg-8">
