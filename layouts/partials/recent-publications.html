@@ -1,5 +1,5 @@
 {{ range $index, $elem := where site.RegularPages "Section" "research" }}
-  {{ if $elem.Params.selected }}  <!-- Filters only selected publications -->
+  {{ if $elem.Params.SelectedPub }}  <!-- Filters only selected publications -->
   
   <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
   <p><em>{{ .Params.Journal }}</em>, {{ .Params.YearCoauthors }}</p>
