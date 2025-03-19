@@ -9,6 +9,9 @@ linkType: external  # internal  or external
 permalinks: https://doi.org/10.1215/00703370-11841397
 
 
+# Define a reusable variable/folder name to avoid having to repeat copying and pasting in all paths below
+folder: "2025-demography-crime"  
+
 # Summary. An optional shortened abstract.
 
 
@@ -16,16 +19,18 @@ permalinks: https://doi.org/10.1215/00703370-11841397
 
 
 btn:
-- url : "/research/2025-demography-crime/2025-demography-crime-appendix.pdf" 
+- url : "/research/{{< param folder >}}/{{< param folder >}}-article.pdf" 
+  name: pdf
+- url : "/research/{{< param folder >}}/{{< param folder >}}-appendix.pdf" 
   name: appendix
 
 
   
 # Project  image 
 images:
-- path: "research/2025-demography-crime/2025-demography-crime-image1.png"
+- path: "research/{{< param folder >}}/{{< param folder >}}-image1.png"
   caption: ""
-- path: "research/2025-demography-crime/2025-demography-crime-image2.png"
+- path: "research/{{< param folder >}}/{{< param folder >}}-image2.png"
   caption: ""  
 
 # Area
@@ -39,9 +44,9 @@ Over the past few decades, U.S. cities have changed dramatically, largely becaus
 
 
 
-If you are having issues downloading the PDF with the article, [click here]({{< file-download url="/research/2025-demography-crime/2025-demography-crime-article.pdf" >}}).
+If you are having issues downloading the PDF with the article, [click here]({{< file-download url="/research/{{< param folder >}}/{{< param folder >}}-article.pdf" >}}).
 
-{{< pdfedit src="/research/2025-demography-crime/2025-demography-crime-article.pdf" title="Download PDF" height="600" width="90%" >}}
+{{< pdfedit src="/research/{{< param folder >}}/{{< param folder >}}-article.pdf" title="Download PDF" height="600" width="90%" >}}
 
 
 
