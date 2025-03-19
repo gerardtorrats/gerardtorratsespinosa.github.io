@@ -46,7 +46,7 @@ I am an Assistant Professor in [Sociology at Columbia University](https://sociol
 &nbsp;
 #### News and Updates
 
-<div style="max-height: 400px; overflow-y: auto; border: 1px solid #ddd; padding: 10px;">
+<div style="max-height: 50px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; background-color: #f9f9f9;">
 
 
 *Mar 2025:* The article  "Severe Tornadoes and Infant Birth Weight in the United States," co-authored with Nicholas Mark and Ethan Raker, has been accepted at the *Demography*.  
