@@ -25,19 +25,19 @@ courses:
 - course: 
   institution: 
   year:
-# social:
-# - icon: github
-#   icon_pack: fa
-#   image: /images/github-logo-filled.png 
-#   link: https://github.com/gerardtorrats
-# - icon: scholar
-#   icon_pack: fa
-#   image: /images/google-scholar.png 
-#  link: https://scholar.google.com/citations?user=GWZTWLUAAAAJ&hl=en
-# - icon: email
-#  icon_pack: fa
-#   image: /images/email-at.png 
-#   link: mailto:gerard.torrats@columbia.edu  
+social:
+- icon: github
+  icon_pack: fa
+  image: /images/github-logo-filled.png 
+  link: https://github.com/gerardtorrats
+- icon: scholar
+  icon_pack: fa
+  image: /images/google-scholar.png 
+  link: https://scholar.google.com/citations?user=GWZTWLUAAAAJ&hl=en
+- icon: email
+  icon_pack: fa
+  image: /images/email-at.png 
+  link: mailto:gerard.torrats@columbia.edu  
 ---
 
 &nbsp;
