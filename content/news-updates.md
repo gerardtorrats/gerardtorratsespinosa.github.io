@@ -3,6 +3,7 @@ title: "News and Updates"
 type: "news"
 ---
 ##### 2025
+‣ James Chu and I organized the [17th Annual Conference of the International Network of Analytical Sociology](https://inas.sociology.columbia.edu/) at Columbia University.  
 ‣ The article  "Severe Tornadoes and Infant Birth Weight in the United States," co-authored with Nicholas Mark and Ethan Raker, has been accepted at *Demography*.  
 ‣ The article  "[From the Block to the Beat: How Violence in Officers’ Neighborhoods Influences Racially Biased Policing](https://doi.org/10.1086/734296)," co-authored with Samuel Donahue, has been accepted at the *American Journal of Sociology*.  
 ‣ The article  "[The Fall of Violence and the Reconfiguration of Urban Neighborhoods](https://doi.org/10.1215/00703370-11841397)," co-authored with Patrick Sharkey, has been accepted at *Demography*.  
