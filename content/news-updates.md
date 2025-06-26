@@ -3,10 +3,10 @@ title: "News and Updates"
 type: "news"
 ---
 ##### 2025
+‣ The article  "[From the Block to the Beat: How Violence in Officers’ Neighborhoods Influences Racially Biased Policing](https://doi.org/10.1086/734296)," co-authored with Samuel Donahue, has been published at the *American Journal of Sociology*. 
 ‣ James Chu and I organized the [17th Annual Conference of the International Network of Analytical Sociology](https://inas.sociology.columbia.edu/) at Columbia University.  
 ‣ The article  "Severe Tornadoes and Infant Birth Weight in the United States," co-authored with Nicholas Mark and Ethan Raker, has been accepted at *Demography*.  
-‣ The article  "[From the Block to the Beat: How Violence in Officers’ Neighborhoods Influences Racially Biased Policing](https://doi.org/10.1086/734296)," co-authored with Samuel Donahue, has been accepted at the *American Journal of Sociology*.  
-‣ The article  "[The Fall of Violence and the Reconfiguration of Urban Neighborhoods](https://doi.org/10.1215/00703370-11841397)," co-authored with Patrick Sharkey, has been accepted at *Demography*.  
+‣ The article  "[The Fall of Violence and the Reconfiguration of Urban Neighborhoods](https://doi.org/10.1215/00703370-11841397)," co-authored with Patrick Sharkey, has been published at *Demography*.  
 ##### 2024
 ‣ The article  "[Police violence reduces trust in the police among Black residents](https://doi.org/10.1371/journal.pone.0308487)," co-authored with Jonathan Ben-Menachem, has been published in *PLoS ONE*.  
 ‣ Kara Rudolph and I have been awarded a grant from the [Centers for Disease Control and Prevention](https://www.cdc.gov/injury-icrc/php/centers/index.html) to study the relationship between community-level exposure to aggressive policing and adverse childhood experiences.  
