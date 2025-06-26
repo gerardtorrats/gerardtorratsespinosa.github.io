@@ -7,6 +7,8 @@ type: "news"
 ‣ James Chu and I organized the [17th Annual Conference of the International Network of Analytical Sociology](https://inas.sociology.columbia.edu/) at Columbia University.  
 ‣ The article  "Severe Tornadoes and Infant Birth Weight in the United States," co-authored with Nicholas Mark and Ethan Raker, has been accepted at *Demography*.  
 ‣ The article  "[The Fall of Violence and the Reconfiguration of Urban Neighborhoods](https://doi.org/10.1215/00703370-11841397)," co-authored with Patrick Sharkey, has been published at *Demography*.  
+‣ I wrote a piece for *Vital City* discussing the clustering of gun violence in New York City: "[Clustering of Gun Violence: The Problem That Won’t Go Away](https://www.vitalcitynyc.org/articles/clustering-of-gun-violence-the-problem-that-wont-go-away)".  
+
 ##### 2024
 ‣ The article  "[Police violence reduces trust in the police among Black residents](https://doi.org/10.1371/journal.pone.0308487)," co-authored with Jonathan Ben-Menachem, has been published in *PLoS ONE*.  
 ‣ Kara Rudolph and I have been awarded a grant from the [Centers for Disease Control and Prevention](https://www.cdc.gov/injury-icrc/php/centers/index.html) to study the relationship between community-level exposure to aggressive policing and adverse childhood experiences.  
