@@ -4,6 +4,7 @@ type: "news"
 ---
 ##### 2025
 ‣ The article  "[From the Block to the Beat: How Violence in Officers’ Neighborhoods Influences Racially Biased Policing](https://doi.org/10.1086/734296)," co-authored with Samuel Donahue, has been published at the *American Journal of Sociology*.  
+‣ The article  "[Covid, Compassion, and Altruistic Mobilization: Explaining Nonblack Participation in the Black Lives Matter Movement of 2020](https://doi.org/10.17813/1086-671X-30-2-113)," co-authored with Andreas Wimmer, has been published at  *Mobilization*.  
 ‣ James Chu and I organized the [17th Annual Conference of the International Network of Analytical Sociology](https://inas.sociology.columbia.edu/) at Columbia University.  
 ‣ The article  "Severe Tornadoes and Infant Birth Weight in the United States," co-authored with Nicholas Mark and Ethan Raker, has been accepted at *Demography*.  
 ‣ The article  "[The Fall of Violence and the Reconfiguration of Urban Neighborhoods](https://doi.org/10.1215/00703370-11841397)," co-authored with Patrick Sharkey, has been published at *Demography*.  
