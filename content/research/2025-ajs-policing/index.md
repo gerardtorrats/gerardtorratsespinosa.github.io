@@ -3,7 +3,7 @@ title: "From the Block to the Beat: How Violence in Officers’ Neighborhoods In
 Journal: "American Journal of Sociology"
 YearCoauthors: "2025 (with Samuel Donahue)"
 id: research
-SelectedPub: true  # This controls whether is is shown in the Selected Publications section of the home page
+SelectedPub: true   # This controls whether it is  shown in the Selected Publications section of the home page (leave blank if don't want to show it; write true if want to show it)
 date: "2025-04-01"
 
 linkType: external  # internal  or external

@@ -3,7 +3,7 @@ title: "Severe Tornadoes and Infant Birth Weight in the United States"
 Journal: "Demography"
 YearCoauthors: "2025 (with Nicholas Mark and Ethan Raker)"
 id: research
-SelectedPub: true  # This controls whether is is shown in the Selected Publications section of the home page
+SelectedPub:    # This controls whether it is  shown in the Selected Publications section of the home page (leave blank if don't want to show it; write true if want to show it)
 date: "2025-12-01"
 
 linkType: external  # internal  or external

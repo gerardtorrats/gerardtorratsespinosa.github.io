@@ -4,7 +4,7 @@ Journal: "PLoS ONE"
 YearCoauthors: "2024 (with Jonathan Ben-Menachem)"
 id: research
 date: "2024-03-03"
-SelectedPub: true  # This controls whether is is shown in the Selected Publications section of the home page
+SelectedPub: true   # This controls whether it is  shown in the Selected Publications section of the home page (leave blank if don't want to show it; write true if want to show it)
 
 linkType: external  # internal  or external
 permalinks: https://doi.org/10.1371/journal.pone.0308487

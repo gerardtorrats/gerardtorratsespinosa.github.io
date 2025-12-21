@@ -4,7 +4,7 @@ Journal: "Mobilization"
 YearCoauthors: "2025 (with Andreas Wimmer)"
 id: research
 
-SelectedPub:   # This controls whether it is  shown in the Selected Publications section of the home page
+SelectedPub:   # This controls whether it is  shown in the Selected Publications section of the home page (leave blank if don't want to show it; write true if want to show it)
 date: "2025-01-10"
 
 linkType: external  # internal  or external

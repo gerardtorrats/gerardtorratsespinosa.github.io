@@ -3,7 +3,7 @@ title: "The Fall of Violence and the Reconfiguration of Urban Neighborhoods"
 Journal: "Demography"
 YearCoauthors: "2025 (with Patrick Sharkey)"
 id: research
-SelectedPub: true  # This controls whether is is shown in the Selected Publications section of the home page
+SelectedPub: true  # This controls whether it is  shown in the Selected Publications section of the home page (leave blank if don't want to show it; write true if want to show it)
 date: "2025-03-01"
 
 linkType: external  # internal  or external
