@@ -5,7 +5,7 @@ name: Gerard Torrats-Espinosa
 role: "Assistant Professor <br>  Department of Sociology <br> Columbia University" 
 link1: "/cv/cv-torrats-espinosa.pdf"
 link1text: "Download my CV"
-link2: "https://calendly.com/gerard-torrats"
+link2: "https://calendly.com/gerardtorrats/office-hours"
 link2text: "Office Hours Sign Up"
 addtext: ""
 addtext2: ""
